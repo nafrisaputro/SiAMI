@@ -34,46 +34,46 @@
 
 <body>
 
-         
-    <h2>Sistem Informasi Audit Mutu Internal</h2><br>
-    <h2>Politeknik Negeri Malang</h2>
+
+  <h2>Sistem Informasi Audit Mutu Internal</h2><br>
+  <h2>Politeknik Negeri Malang</h2>
   <div class="page login-page">
-       <div class="container">
-        <div class="row">
+    <div class="container">
+      <div class="row">
         <div class="col-md-8">
           <!-- <div class="form-outer text-center d-flex align-items-center">  -->
           <img src="{{asset('Admin/img/ami/logo.png')}}" style="width: 250px; height: 250px; margin-top: 170px;margin-left: 230px;margin-bottom: 30px">
           <div class="logo text-uppercase" style="text-align: center;">
-          <h3>Sistem Informasi Audit Mutu Internal</h3>
-          <h3>Politeknik Negeri Malang</h3>
+            <h3>Sistem Informasi Audit Mutu Internal</h3>
+            <h3>Politeknik Negeri Malang</h3>
           </div>
-        <!-- </div> -->
+          <!-- </div> -->
         </div>
         <div class="col-lg-4">
           <div class="form-inner" style="margin-top: 150px; margin-bottom: 150px;">
-          <div class="logo text-uppercase" style="text-align: center;"><span>Login </span></div>
-          <form class="text-left form-validate" action="/postlogin" method="POST" >
-          {{csrf_field()}}
-            <div class="form-group-material">
-              <input id="nip" type="text" name="nip" required data-msg="Masukan NIP" class="input-material">
-              <label for="nip" class="label-material">NIP</label>
-            </div>
-            <div class="form-group-material">
-              <input id="password" type="password" name="password" required data-msg="Masukkan Password" class="input-material">
-              <label for="password" class="label-material">Password</label>
-            </div>
-            <div class="form-group text-center">
-              <button type="submit" class="btn btn-primary">Login</button>
-              </a>
-            </div>
-          </form>
-        </div>
-        </div>
+            <div class="logo text-uppercase" style="text-align: center;"><span>Login </span></div>
+            <form class="text-left form-validate" action="/postlogin" method="POST">
+              {{csrf_field()}}
+              <div class="form-group-material">
+                <input id="username" type="text" name="username" required data-msg="Masukan USERNAME" class="input-material">
+                <label for="username" class="label-material">USERNAME</label>
+              </div>
+              <div class="form-group-material">
+                <input id="password" type="password" name="password" required data-msg="Masukkan Password" class="input-material">
+                <label for="password" class="label-material">Password</label>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-        </div>
+    </div>
   </div>
-   <!-- <div class="form-outer text-center d-flex align-items-center">                  </div>  -->
+  </div>
+  <!-- <div class="form-outer text-center d-flex align-items-center">                  </div>  -->
 
   <!-- JavaScript files-->
   <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
