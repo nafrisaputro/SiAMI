@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nip', 'nama',  'email', 'password', 'level', 'foto',
+        'nip', 'nama',  'email',  'username', 'password', 'level', 'foto',
     ];
 
     /**
@@ -44,11 +44,11 @@ class User extends Authenticatable
         }
         return asset('images/.$this->foto');
     }
-     public function jurusan()
+    public function jurusan()
     {
         return $this->belongsTo(Jurusan::class);
     }
-      public function prodi()
+    public function prodi()
     {
         return $this->belongsTo(Prodi::class);
     }
