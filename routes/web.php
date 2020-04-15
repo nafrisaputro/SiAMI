@@ -65,6 +65,8 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function
 route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], function () {
     route::get('/dashboard', 'DashboardController@index');
 
+    route::get('/form2', 'Form2Controller@index');
+
     route::get('/form5/kps', 'Form5ptppController@kps');
     // Route::post('/form5/edit1', 'Form5ptppController@edit1');
 
