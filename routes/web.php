@@ -50,7 +50,7 @@ route::group(['middleware' => ['auth', 'CekRole:Admin']], function () {
     route::post('/form5/{id}/update', 'Form5ptppController@update');
     route::get('/form5/{id}/delete', 'Form5ptppController@delete');
 
- // route::get('test', 'TEsting@test');    
+    // route::get('test', 'TEsting@test');    
 });
 
 route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function () {
@@ -60,7 +60,6 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function
 
 
     route::get('/ptpp/jurusan', 'PtppController@jurusan');
-
 });
 
 route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], function () {
@@ -70,33 +69,28 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], fu
     // Route::post('/form5/edit1', 'Form5ptppController@edit1');
 
     route::get('/ptpp/prodi', 'PtppController@prodi');
-
 });
 
 route::group(['middleware' => ['auth', 'CekRole:Admin,Kantor Penjaminan Mutu']], function () {
- route::get('/dashboard', 'DashboardController@index');
+    route::get('/dashboard', 'DashboardController@index');
 
- route::get('/form5', 'Form5ptppController@index');
- Route::post('/form5/create', 'Form5ptppController@create');
- // route::get('/form5/{id}/edit', 'Form5ptppController@edit');
- // route::post('/form5/{id}/update', 'Form5ptppController@update');
- route::get('/form5/{id}/delete', 'Form5ptppController@delete');
+    route::get('/form5', 'Form5ptppController@index');
+    Route::post('/form5/create', 'Form5ptppController@create');
+    // route::get('/form5/{id}/edit', 'Form5ptppController@edit');
+    // route::post('/form5/{id}/update', 'Form5ptppController@update');
+    route::get('/form5/{id}/delete', 'Form5ptppController@delete');
 
- route::get('/ptpp', 'PtppController@index');
+    route::get('/ptpp', 'PtppController@index');
 
- route::get('/form1form2', 'Form1form2Controller@index');
+    route::get('/form1form2', 'Form1form2Controller@index');
 
- route::get('/form1form2/dataform1', 'Form1form2Controller@dataform1');
- route::post('/form1form2/create', 'Form1form2Controller@create');
- route::get('/form1form2/{id_form1}/edit', 'Form1form2Controller@edit');
- route::post('/form1form2/{id_form1}/update', 'Form1form2Controller@update');
- route::get('/form1form2/{id_form1}/delete', 'Form1form2Controller@delete');
+    route::get('/form1form2/dataform1', 'Form1form2Controller@dataform1');
+    route::post('/form1form2/create', 'Form1form2Controller@create');
+    route::get('/form1form2/{id_form1}/edit', 'Form1form2Controller@edit');
+    route::post('/form1form2/{id_form1}/update', 'Form1form2Controller@update');
+    route::get('/form1form2/{id_form1}/delete', 'Form1form2Controller@delete');
 
- route::get('/form1form2/dataform2', 'Form1form2Controller@dataform2');
- route::post('/form1form2/create2', 'Form1form2Controller@create2');
- route::get('/form1form2/{id_form2}/delete2', 'Form1form2Controller@delete2');
-
-
+    route::get('/form1form2/dataform2', 'Form1form2Controller@dataform2');
+    route::post('/form1form2/create2', 'Form1form2Controller@create2');
+    route::get('/form1form2/{id_form2}/delete2', 'Form1form2Controller@delete2');
 });
-
-
