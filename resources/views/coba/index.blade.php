@@ -29,7 +29,7 @@
                                     <tr>
                                         <th>NAMA LENGKAP</th>
                                         <th>NIP</th>
-                                        <!-- <th>PASSWORD</th> -->
+                                        <th>USERNAME</th>
                                         <th>LEVEL</th>
                                         <th>AKSI</th>
                                     </tr>
@@ -39,7 +39,7 @@
                                     <tr>
                                         <td>{{$coba->nama}}</td>
                                         <td>{{$coba->nip}}</td>
-                                        <!-- <td>{{$coba->password}}</td> -->
+                                        <td>{{$coba->username}}</td>
                                         <td>{{$coba->level}}</td>
                                         <td>
                                             <a href="/coba/{{$coba->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
@@ -87,7 +87,7 @@
                             <option value="Kepala Jurusan">Kantor Penjaminan Mutu</option>
                             <option value="Ketua Jurusan">Ketua Jurusan</option>
                             <option value="Ketua Program Studi">Ketua Program Studi</option>
-                            
+
                         </select>
                     </div>
                     <div class="form-group">
