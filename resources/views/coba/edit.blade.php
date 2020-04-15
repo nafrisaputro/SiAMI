@@ -52,17 +52,17 @@
                                 <label for="exampleInputEmail1">NIP</label>
                                 <input name="nip" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nip" value="{{$coba->nip}}">
                             </div>
-                            <!-- <div class="form-group">
-                                <label for="exampleInputEmail1">Password</label>
-                                <input name="passwordd" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Password Baru" value="{{$coba->password}}">
-                            </div> -->
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">USERNAME</label>
+                                <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Username" value="{{$coba->username}}">
+                            </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Level</label>
                                 <select name="level" class="form-control" id="exampleFormControlSelect1">
                                     <option value="Admin" @if($coba->level == "Admin") selected @endif>Admin</option>
                                     <option value="Kantor Penjaminan Mutu" @if($coba->level == "Kantor Penjaminan Mutu") selected @endif>Kantor Penjaminan Mutu</option>
                                     <option value="Ketua Jurusan" @if($coba->level == "Ketua Jurusan") selected @endif>Ketua Jurusan</option>
-                                     <option value="Ketua Program Studi" @if($coba->level == "Ketua Program Studi") selected @endif>Ketua Program Studi</option>
+                                    <option value="Ketua Program Studi" @if($coba->level == "Ketua Program Studi") selected @endif>Ketua Program Studi</option>
                                 </select>
                             </div>
                             <div class="form-group">

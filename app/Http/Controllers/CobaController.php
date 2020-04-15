@@ -14,10 +14,10 @@ class CobaController extends Controller
     public function create(Request $request)
     {
         // dd($request->all());
-        
+
         $user = new \App\User;
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('images/',$request->file('foto')->getClientOriginalName());
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('images/', $request->file('foto')->getClientOriginalName());
             $user->foto = $request->file('foto')->getClientOriginalName();
         }
         $user->level = $request->level;
@@ -42,11 +42,11 @@ class CobaController extends Controller
         // dd($request->all());
         $coba = \App\User::find($id);
         $coba->update($request->all());
-        // if($request->hasFile('foto')){
-        //     $request->file('foto')->move('images/',$request->file('foto')->getClientOriginalName());
-        //     $coba->foto = $request->file('foto')->getClientOriginalName();
-        //     $coba->save();
-        // }
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('images/', $request->file('foto')->getClientOriginalName());
+            $coba->foto = $request->file('foto')->getClientOriginalName();
+            $coba->save();
+        }
         return redirect('/coba')->with('sukses', 'Data sukses diupdate');
     }
     public function delete($id)

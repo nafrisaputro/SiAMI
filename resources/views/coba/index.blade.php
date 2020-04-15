@@ -77,6 +77,10 @@
                         <input name="nip" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nip">
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputEmail1">USERNAME</label>
+                        <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Username">
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>
                         <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Password Baru">
                     </div>
