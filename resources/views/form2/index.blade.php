@@ -58,7 +58,7 @@
     											<div class="box box-primary">
     													@csrf
                                                     <br>
-                                                    ini tab b
+                                                    ini tab BAYU
     												<div class="form-group">
     													<label >NIK</label>
     													<input required id="nik" name="NIK" type="number" class="form-control" id="">
