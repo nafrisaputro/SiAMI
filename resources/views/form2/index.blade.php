@@ -15,7 +15,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="h1 display">Form 2
+                        <h1 class="h1 display">Upload File Pendukung
                         </h1>
                     </div>
                     <div class="card-body">
@@ -32,8 +32,8 @@
     										<div class="col-md-6">
     											<div class="box box-primary">
     													@csrf
-    												<br>
-    												{{-- NIK --}}
+                                                    <br>
+                                                    ini tab a
     												<div class="form-group">
     													<label >NIK</label>
     													<input required id="nik" name="NIK" type="number" class="form-control" id="">
@@ -43,7 +43,6 @@
     										<div class="col-md-6">
     											<div class="box box-primary">
     												<br>
-    												{{-- alamat --}}
     												<div class="form-group">
     													<label>Alamat</label>
     													<textarea required name="ALAMAT" class="form-control" rows="3" placeholder=""></textarea>
@@ -58,8 +57,8 @@
     										<div class="col-md-6">
     											<div class="box box-primary">
     													@csrf
-    												<br>
-    												{{-- NIK --}}
+                                                    <br>
+                                                    ini tab b
     												<div class="form-group">
     													<label >NIK</label>
     													<input required id="nik" name="NIK" type="number" class="form-control" id="">
@@ -69,7 +68,6 @@
     										<div class="col-md-6">
     											<div class="box box-primary">
     												<br>
-    												{{-- alamat --}}
     												<div class="form-group">
     													<label >NIK</label>
     													<input required id="nik" name="NIK" type="number" class="form-control" id="">
@@ -78,7 +76,6 @@
     										</div>
     									</div>
     								</div>
-    								
                     </div>
                 </div>
             </div>
