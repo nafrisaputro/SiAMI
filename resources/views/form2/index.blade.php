@@ -33,7 +33,7 @@
                                             <div class="box box-primary">
                                                 @csrf
                                                 <br>
-                                                ini tab a TESTING
+                                                ini tab a TESTING aaa
                                                 <div class="form-group">
                                                     <label>NIK</label>
                                                     <input required id="nik" name="NIK" type="number" class="form-control" id="">
