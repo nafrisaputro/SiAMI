@@ -54,6 +54,30 @@
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="tab_2">
                                     <div class="row">
+
+    										<div class="col-md-6">
+    											<div class="box box-primary">
+    													@csrf
+                                                    <br>
+                                                    ini tab BAYU wardana
+    												<div class="form-group">
+    													<label >NIK</label>
+    													<input required id="nik" name="NIK" type="number" class="form-control" id="">
+    												</div>
+    											</div>
+    										</div>
+    										<div class="col-md-6">
+    											<div class="box box-primary">
+    												<br>
+    												<div class="form-group">
+    													<label >NIK</label>
+    													<input required id="nik" name="NIK" type="number" class="form-control" id="">
+    												</div>          
+    											</div>
+    										</div>
+    									</div>
+    								</div>
+
                                         <div class="col-md-6">
                                             <div class="box box-primary">
                                                 @csrf
@@ -78,6 +102,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
