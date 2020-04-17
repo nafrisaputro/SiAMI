@@ -55,6 +55,11 @@
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
+    <script>
+        function thisFileUpload() {
+            document.getElementById("file").click();
+        };
+    </script>
 </body>
 
 </html>

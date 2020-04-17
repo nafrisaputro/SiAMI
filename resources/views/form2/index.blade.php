@@ -44,16 +44,17 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Sub Elemen</th>
-                                                                    <th>Dokumen</th>
                                                                     <th>Keterangan</th>
+                                                                    <th>Dokumen</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 @foreach($formA as $form2A)
                                                                 <tr>
                                                                     <td>{{$form2A->sub_elemen}}</td>
-                                                                    <td><button type="button" class="btn btn-warning">Upload</button></td>
                                                                     <td>{{$form2A->keterangan}}</td>
+                                                                    <td><input type="file" id="file" style="display:none;" />
+                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
                                                                 </tr>
                                                                 @endforeach
                                                             </tbody>
@@ -77,16 +78,17 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Sub Elemen</th>
-                                                                    <th>Dokumen</th>
                                                                     <th>Keterangan</th>
+                                                                    <th>Dokumen</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 @foreach($formB as $form2B)
                                                                 <tr>
                                                                     <td>{{$form2B->sub_elemen}}</td>
-                                                                    <td><button type="button" class="btn btn-warning">Upload</button></td>
                                                                     <td>{{$form2B->keterangan}}</td>
+                                                                    <td><input type="file" id="file" style="display:none;" />
+                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
                                                                 </tr>
                                                                 @endforeach
                                                             </tbody>
@@ -110,16 +112,17 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Sub Elemen</th>
-                                                                    <th>Dokumen</th>
                                                                     <th>Keterangan</th>
+                                                                    <th>Dokumen</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 @foreach($formC as $form2C)
                                                                 <tr>
                                                                     <td>{{$form2C->sub_elemen}}</td>
-                                                                    <td><button type="button" class="btn btn-warning">Upload</button></td>
                                                                     <td>{{$form2C->keterangan}}</td>
+                                                                    <td><input type="file" id="file" style="display:none;" />
+                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
                                                                 </tr>
                                                                 @endforeach
                                                             </tbody>
