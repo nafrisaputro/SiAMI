@@ -21,6 +21,7 @@ class ProdiController extends Controller
     }
     public function update(Request $request, $id)
     {
+        dd($request->all());
         $prodi = \App\Prodi::find($id);
         $prodi->update($request->all());
         return redirect('/prodi')->with('sukses', 'Data sukses diupdate');

@@ -55,6 +55,15 @@
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
+    <script>
+        $('#editModal').on('show.bs.modal', function(event) {
+            console.log('Modal Opened');
+            var button = $(event.relatedTarget)
+            var modal = $(this)
+
+            modal.find('.modal-body #fprodi').val(prodi);
+        })
+    </script>
 </body>
 
 </html>

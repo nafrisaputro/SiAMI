@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>{{$prodi->nama_prodi}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editModalLabel">
+                                            <button type="button" class="btn btn-warning btn-sm" data-prodiku="{{$prodi->nama_prodi}}" data-toggle="modal" data-target="#editModal">
                                                 Edit
                                             </button>
                                             <a href="/prodi/{{$prodi->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
@@ -83,7 +83,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="editModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -97,7 +97,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="exampleInputEmail1">Prodi</label>
-                        <input name="nama_prodi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Prodi" value="{{$prodi->nama_prodi}}">
+                        <input name="nama_prodi" type="text" class="form-control" id="fprodi" aria-describedby="emailHelp" placeholder="Masukan Prodi" value="{{$prodi->nama_prodi}}">
                     </div>
                     <div>
                         <label for="exampleInputEmail1">Jurusan</label>
