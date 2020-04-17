@@ -17,6 +17,6 @@ class Form2Controller extends Controller
         $formC = \App\Form2::select('sub_elemen', 'keterangan', 'nama_dokumen')
             ->where('elemen', '=', 'Tata Pamong')
             ->get();
-        return view('form2.index', ['formB' => $formB], ['formA' => $formA], ['formC' => $formC]);
+        return view('form2.index', ['formA' => $formA, 'formB' => $formB, 'formC' => $formC]);
     }
 }

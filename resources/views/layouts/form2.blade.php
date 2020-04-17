@@ -38,7 +38,7 @@
     <div class="page">
         @include('layouts.navbar')
         @yield('form2')
-        @include('layouts.footer')
+        <!-- @include('layouts.footer') -->
 
     </div>
 

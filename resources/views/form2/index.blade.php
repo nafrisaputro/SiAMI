@@ -115,11 +115,13 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @foreach($formC as $form2C)
                                                                 <tr>
-                                                                    <td>A</td>
+                                                                    <td>{{$form2C->sub_elemen}}</td>
                                                                     <td><button type="button" class="btn btn-warning">Upload</button></td>
-                                                                    <td>A</td>
+                                                                    <td>{{$form2C->keterangan}}</td>
                                                                 </tr>
+                                                                @endforeach
                                                             </tbody>
                                                         </table>
                                                     </div>
