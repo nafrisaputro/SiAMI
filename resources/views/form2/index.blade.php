@@ -18,151 +18,158 @@
                         <h1 class="h1 display">Upload File Pendukung
                         </h1>
                     </div>
-                    <div class="card-body">
-                        <div class="nav-tabs-custom">
-                            <ul class="nav nav-tabs">
-                                <li class=""><a href="#tab_1" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">A.Analisis SWOT</button></a></li>
-                                <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Visi, Misi, Tujuan dan Sasaran</button></a></li>
-                                <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Tata Pamong</button></a></li>
-                                <li class=""><a href="#tab_4" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Sistem Manajemen Mutu</button></a></li>
-                                <li class=""><a href="#tab_5" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Kerja Sama</button></a></li>
-                                <li class=""><a href="#tab_6" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Manajemen Sumberdaya</button></a></li>
-                                <li class=""><a href="#tab_7" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Pelaksanaan Proses</button></a></li>
-                                <li class=""><a href="#tab_8" data-toggle="tab" aria-expanded="false"><button type="button" class="btn btn-primary">Pengukuran, Analisis dan Perbaikan</button></a></li>
-                            </ul>
-                            </br>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tab_1">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="box box-primary">
-                                                @csrf
-                                                <br>
-                                                <div class="form-group">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Sub Elemen</th>
-                                                                    <th>Keterangan</th>
-                                                                    <th>Dokumen</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach($formA as $form2A)
-                                                                <tr>
-                                                                    <td>{{$form2A->sub_elemen}}</td>
-                                                                    <td>{{$form2A->keterangan}}</td>
-                                                                    <td><input type="file" id="file" style="display:none;" />
-                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'A')">A.Analisis SWOT</button>
+                        <button class="tablinks" onclick="openCity(event, 'B')">Visi, Misi, Tujuan dan Sasaran</button>
+                        <button class="tablinks" onclick="openCity(event, 'C')">Tata Pamong</button>
+                        <button class="tablinks" onclick="openCity(event, 'D')">Sistem Manajemen Mutu</button>
+                        <button class="tablinks" onclick="openCity(event, 'E')">Kerja Sama</button>
+                        <button class="tablinks" onclick="openCity(event, 'F')">Manajemen Sumberdaya</button>
+                        <button class="tablinks" onclick="openCity(event, 'G')">Pelaksanaan Proses</button>
+                        <button class="tablinks" onclick="openCity(event, 'H')">Pengukuran, Analisis dan Perbaikan</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="A" class="tabcontent">
+                        <div class="box box-primary">
+                            @csrf
+                            <div class="form-group">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <button class="btn btn-info float-right">Upload</button>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Sub Elemen</th>
+                                                <th>Nama Dokumen</th>
+                                                <th>Keterangan</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0; ?>
+                                            @foreach($formA as $form2A)
+                                            <?php $no++; ?>
+                                            <tr>
+                                                <td>{{ $no }}</td>
+                                                <td>{{$form2A->sub_elemen}}</td>
+                                                <td>{{$form2A->nama_dokumen}}</td>
+                                                <td>{{$form2A->keterangan}}</td>
+                                                <td><input type="file" id="file" style="display:none;" />
+                                                    <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Pilih File</button></td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_2">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="box box-primary">
-                                                @csrf
-                                                <br>
-                                                <div class="form-group">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Sub Elemen</th>
-                                                                    <th>Keterangan</th>
-                                                                    <th>Dokumen</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach($formB as $form2B)
-                                                                <tr>
-                                                                    <td>{{$form2B->sub_elemen}}</td>
-                                                                    <td>{{$form2B->keterangan}}</td>
-                                                                    <td><input type="file" id="file" style="display:none;" />
-                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="B" class="tabcontent">
+                        <div class="box box-primary">
+                            @csrf
+                            <div class="form-group">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <button class="btn btn-info float-right">Upload</button>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Sub Elemen</th>
+                                                <th>Nama Dokumen</th>
+                                                <th>Keterangan</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0; ?>
+                                            @foreach($formB as $form2B)
+                                            <?php $no++; ?>
+                                            <tr>
+                                                <td>{{ $no }}</td>
+                                                <td>{{$form2B->sub_elemen}}</td>
+                                                <td>{{$form2B->nama_dokumen}}</td>
+                                                <td>{{$form2B->keterangan}}</td>
+                                                <td><input type="file" id="file" style="display:none;" />
+                                                    <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Pilih File</button></td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_3">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="box box-primary">
-                                                @csrf
-                                                <br>
-                                                <div class="form-group">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Sub Elemen</th>
-                                                                    <th>Keterangan</th>
-                                                                    <th>Dokumen</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach($formC as $form2C)
-                                                                <tr>
-                                                                    <td>{{$form2C->sub_elemen}}</td>
-                                                                    <td>{{$form2C->keterangan}}</td>
-                                                                    <td><input type="file" id="file" style="display:none;" />
-                                                                        <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Upload</button></td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="C" class="tabcontent">
+                        <div class="box box-primary">
+                            @csrf
+                            <div class="form-group">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <button class="btn btn-info float-right">Upload</button>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Sub Elemen</th>
+                                                <th>Nama Dokumen</th>
+                                                <th>Keterangan</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0; ?>
+                                            @foreach($formC as $form2C)
+                                            <?php $no++; ?>
+                                            <tr>
+                                                <td>{{ $no }}</td>
+                                                <td>{{$form2C->sub_elemen}}</td>
+                                                <td>{{$form2C->nama_dokumen}}</td>
+                                                <td>{{$form2C->keterangan}}</td>
+                                                <td><input type="file" id="file" style="display:none;" />
+                                                    <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Pilih File</button></td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_4">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="box box-primary">
-                                                @csrf
-                                                <br>
-                                                <div class="form-group">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Sub Elemen</th>
-                                                                    <th>Dokumen</th>
-                                                                    <th>Keterangan</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>B</td>
-                                                                    <td><button type="button" class="btn btn-warning">Upload</button></td>
-                                                                    <td>B</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="D" class="tabcontent">
+                        <div class="box box-primary">
+                            @csrf
+                            <div class="form-group">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <button class="btn btn-info float-right">Upload</button>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Sub Elemen</th>
+                                                <th>Nama Dokumen</th>
+                                                <th>Keterangan</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0; ?>
+                                            @foreach($formD as $form2D)
+                                            <?php $no++; ?>
+                                            <tr>
+                                                <td>{{ $no }}</td>
+                                                <td>{{$form2D->sub_elemen}}</td>
+                                                <td>{{$form2D->nama_dokumen}}</td>
+                                                <td>{{$form2D->keterangan}}</td>
+                                                <td><input type="file" id="file" style="display:none;" />
+                                                    <button id="button" name="button" value="Upload" onclick="thisFileUpload();" class="btn btn-warning">Pilih File</button></td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -172,5 +179,4 @@
         </div>
     </div>
 </section>
-</div>
 @endsection
