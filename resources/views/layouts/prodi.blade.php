@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Data Jurusan</title>
+    <title>Data Prodi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -55,13 +55,17 @@
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
-    <script>
-        $('#editModal').on('show.bs.modal', function(event) {
-            console.log('Modal Opened');
+    <script type="text/javascript">
+        $('#editModalLabel').on('show.bs.modal', function(event) {
+
             var button = $(event.relatedTarget)
+            var prodi = button.data('myprodi')
+            var jurusan = button.data('myjurusan')
+
             var modal = $(this)
 
-            modal.find('.modal-body #fprodi').val(prodi);
+            modal.find('.modal-body #nama_prodi').val(prodi);
+            modal.find('.modal-body #id_jurusan').val(jurusan);
         })
     </script>
 </body>

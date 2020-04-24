@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>{{$prodi->nama_prodi}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-warning btn-sm" data-prodiku="{{$prodi->nama_prodi}}" data-toggle="modal" data-target="#editModal">
+                                            <button type="button" class="btn btn-info btn-sm" data-myprodi="{{$prodi->nama_prodi}}" data-myjurusan="{{$prodi->id_jurusan}}" data-toggle="modal" data-target="#editModalLabel">
                                                 Edit
                                             </button>
                                             <a href="/prodi/{{$prodi->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
@@ -66,12 +66,12 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Prodi</label>
-                        <input name="nama_prodi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Prodi Baru">
+                        <input name="nama_prodi" type="text" class="form-control" id="nama_prodi" aria-describedby="emailHelp" placeholder="Masukan Prodi Baru">
                     </div>
                     <label for="exampleInputEmail1">Jurusan</label>
-                    <select name="jurusan_id" class="form-control" id="exampleFormControlSelect1">
-                        @foreach($table_jurusan as $prodi1)
-                        <option>{{$prodi1->id}}</option>
+                    <select name="id_jurusan" class="form-control" id="id_jurusan">
+                        @foreach($table_jurusan as $jurusan)
+                        <option value="{{$jurusan->id}}">{{$jurusan->nama_jurusan}}</option>
                         @endforeach
                     </select>
             </div>
@@ -83,7 +83,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -97,18 +97,19 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="exampleInputEmail1">Prodi</label>
-                        <input name="nama_prodi" type="text" class="form-control" id="fprodi" aria-describedby="emailHelp" placeholder="Masukan Prodi" value="{{$prodi->nama_prodi}}">
+                        <input name="nama_prodi" type="text" class="form-control" id="nama_prodi" aria-describedby="emailHelp" placeholder="Masukan Prodi">
                     </div>
                     <div>
                         <label for="exampleInputEmail1">Jurusan</label>
-                        <select name="jurusan_id" class="form-control" id="exampleFormControlSelect1">
-                            @foreach($table_jurusan as $prodi1)
-                            <option>{{$prodi1->id}}</option>
+                        <select name="id_jurusan" class="form-control" id="id_jurusan">
+                            @foreach($table_jurusan as $jurusan)
+                            <option value="{{$jurusan->id}}">{{$jurusan->nama_jurusan}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-warning">Update</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-info">Update</button>
                     </div>
                 </form>
             </div>

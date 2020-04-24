@@ -38,6 +38,7 @@
               <table id="table5" class="table table-bordered">
                 <thead style="text-align: center;">
                   <tr>
+                    <!-- <th>NO</th> -->
                     <th>DESKRIPSI KONDISI</th>
                     <th>HASIL /OB/KTS</th>
                     <th>KRITERIA</th>
@@ -58,6 +59,7 @@
                 <tbody>
                   @foreach($table_form5 as $form5)
                   <tr>
+                    <!-- <td>{{$form5->no_ptpp}}</td> -->
                     <td>{{$form5->deskripsi_kondisi}}</td>
                     <td>{{$form5->hasil_temuan}}</td>
                     <td>{{$form5->kriteria}}</td>
@@ -66,16 +68,16 @@
                     <!-- <td>{{$form5->rekomendasi}}</td> -->
                     <!--  <td>{{$form5->tanggapan_audit}}</td>
                                         <td>{{$form5->rencana_perbaikan}}</td> -->
-                    <!--   <td>{{$form5->jadwal_perbaikan}}</td>
+                    <!--   <td>{{date('d F Y', strtotime($form5->jadwal_perbaikan))}}</td>
                                         <td>{{$form5->pj_perbaikan}}</td> -->
                     <!--   <td>{{$form5->rencana_pencegahan}}</td>
-                                        <td>{{$form5->jadwal_pencegahan}}</td>
+                                        <td>{{date('d F Y', strtotime($form5->jadwal_pencegahan))}}</td>
                                         <td>{{$form5->pj_pencegahan}}</td> -->
                     <td>
-                      <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#detail">
-                        <i class="fa fa-eye"></i> Detail
-                      </button>
-                      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModalLabel">
+                      <!--    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#detail">
+                                           <i class="fa fa-eye"></i> Detail
+                                         </button> -->
+                      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit" data-myprodi="{{$form5->id_prodi}}" data-myno="{{$form5->no_ptpp}}" data-mydes="{{$form5->deskripsi_kondisi}}" data-myhasil="{{$form5->hasil_temuan}}" data-mykriteria="{{$form5->kriteria}}" data-mymasalah="{{$form5->akar_masalah}}" data-myakibat="{{$form5->akibat_resiko}}" data-myrekom="{{$form5->rekomendasi}}" data-myjadwal="{{$form5->jadwal_perbaikan}}" data-mypj="{{$form5->pj_perbaikan}}">
                         <i class="fa fa-pencil"></i> Edit
                       </button>
                       <a href="/form5/{{$form5->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"><i class="fa fa-trash"></i> Hapus</a>
@@ -122,22 +124,28 @@
             <input name="deskripsi" type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp" placeholder="Masukan Deskripsi Kondisi">
           </div>
           <div class="form-group">
-            <label for="deskripsi">Hasil /OB/KTS</label>
-            <div class="i-checks">
-              <input id="ob" type="radio" value="OB" name="radio" class="form-control-custom radio-custom">
-              <label for="ob">OB (Observasi)</label>
-              <input id="kts" type="radio" value="KTS" name="radio" class="form-control-custom radio-custom">
-              <label for="kts">KTS (Ketidaksesuaian)</label>
-            </div>
+            <label>Hasil /OB/KTS</label><br>
+            <input type="radio" id="ob" name="radio" value="OB" /> OB (Observasi)
+            <input type="radio" id="kts" name="radio" value="KTS" /> KTS (Ketidaksesuaian)
+            <!-- <label for="ob">Hasil /OB/KTS</label>
+                              <div class="i-checks">
+                                <input id="ob" type="radio" value="OB" name="radio" class="form-control-custom radio-custom">
+                                <label for="ob">OB (Observasi)</label>
+                                <input id="kts" type="radio"  value="KTS" name="radio" class="form-control-custom radio-custom">
+                                <label for="kts">KTS (Ketidaksesuaian)</label>
+                              </div> -->
           </div>
           <div class="form-group">
-            <label for="kriteria">Kriteria</label>
-            <div class="i-checks">
-              <input id="Mayor" type="radio" value="Mayor" name="radio2" class="form-control-custom radio-custom">
-              <label for="Mayor">Mayor</label>
-              <input id="Minor" type="radio" value="Minor" name="radio2" class="form-control-custom radio-custom">
-              <label for="Minor">Minor</label>
-            </div>
+            <label>Kriteria</label><br>
+            <input type="radio" id="Mayor" name="radio2" value="Mayor" /> Mayor
+            <input type="radio" id="Minor" name="radio2" value="Minor" /> Minor
+            <!-- <label for="kriteria">Kriteria</label>
+                              <div class="i-checks">
+                                <input id="Mayor" type="radio" value="Mayor" name="radio2" class="form-control-custom radio-custom">
+                                <label for="Mayor">Mayor</label>
+                                <input id="Minor" type="radio"  value="Minor" name="radio2" class="form-control-custom radio-custom">
+                                <label for="Minor">Minor</label>
+                              </div> -->
           </div>
           <div class="form-group">
             <label for="masalah">Akar Masalah</label>
@@ -263,5 +271,75 @@
     </div>
   </div>
 </div>
-
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 600px">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Data Temuan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/form5/{{$form5->id}}/edit" method="POST" enctype="multipart/form-data">
+          {{csrf_field()}}
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Prodi</label>
+            <select name="prodi" class="form-control" id="prodi" required="">
+              <option value="">Pilih Prodi</option>
+              @foreach($prodi as $pr)
+              <option value="{{ $pr->id}}">{{ $pr->nama_prodi}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="no">No dan Klausul ISO</label>
+            <input name="no" type="text" class="form-control" id="no" aria-describedby="emailHelp" placeholder="Masukan Nomor dan Klausul ISO" required="">
+          </div>
+          <div class="form-group">
+            <label for="deskripsi">Deskripsi Kondisi</label>
+            <input name="deskripsi" type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp" placeholder="Masukan Deskripsi Kondisi">
+          </div>
+          <div class="form-group">
+            <label>Hasil /OB/KTS</label><br>
+            <input type="radio" id="ob" name="radio" value="OB" /> OB (Observasi)
+            <input type="radio" id="kts" name="radio" value="KTS" /> KTS (Ketidaksesuaian)
+          </div>
+          <div class="form-group">
+            <label>Kriteria</label><br>
+            <input type="radio" id="Mayor" name="radio2" value="Mayor" /> Mayor
+            <input type="radio" id="Minor" name="radio2" value="Minor" /> Minor
+          </div>
+          <div class="form-group">
+            <label for="masalah">Akar Masalah</label>
+            <input name="masalah" type="text" class="form-control" id="masalah" aria-describedby="emailHelp" placeholder="Masukan Akar Masalah">
+          </div>
+          <div class="form-group">
+            <label for="akibat">Akibat (RESIKO)</label>
+            <input name="akibat" type="text" class="form-control" id="akibat" aria-describedby="emailHelp" placeholder="Masukan Akibat (RESIKO)">
+          </div>
+          <div class="form-group">
+            <label for="rekom">Rekomendasi</label>
+            <input name="rekom" type="text" class="form-control" id="rekom" aria-describedby="emailHelp" placeholder="Masukan Rekomendasi">
+          </div>
+          <div class="form-group">
+            <label for="jadwal">Jadwal Perbaikan</label>
+            <input name="jadwal" type="date" class="form-control" id="jadwal" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="gkm">Penanggung Jawab Perbaikan(GKM)</label>
+            <input name="gkm" type="text" class="form-control" id="gkm" aria-describedby="emailHelp" placeholder="Masukan Penanggung Jawaban Perbaikan(GKM)">
+          </div>
+          <div class="form-group">
+            <input name="status" type="hidden" class="form-control" id="status" value="Open" aria-describedby="emailHelp">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection

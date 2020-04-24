@@ -54,6 +54,16 @@
     <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
     <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script> -->
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
     <script>
@@ -83,6 +93,34 @@
             evt.currentTarget.className += " active";
         }
     </script>
+    <!-- <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $('.update').editable({
+            url: '/update-user',
+            type: 'text',
+            pk: 1,
+            name: 'name',
+            title: 'Enter name'
+        });
+    </script> -->
+    <!-- <script type="text/javascript">
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var elemen = button.data('elemen')
+            var sub_elemen = button.data('sub_elemen')
+            var keterangan = button.data('keterangan')
+
+            var modal = $(this)
+
+            modal.find('.modal-body #elemen').val(elemen)
+            modal.find('.modal-body #sub_elemen').val(sub_elemen)
+            modal.find('.modal-body #keterangan').val(keterangan)
+        })
+    </script> -->
 </body>
 
 </html>

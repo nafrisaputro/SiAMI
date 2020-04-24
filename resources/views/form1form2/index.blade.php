@@ -29,6 +29,30 @@
             <h4>Form 1 Audit Checklist</h4>
           </div>
           <div class="card-body">
+             <table class="table table-bordered">
+              <thead style="text-align: center">
+                <tr>
+                 <th colspan="2">Auditi</th>
+                 <th colspan="2">Ruang Lingkup</td>
+               </tr>
+               <tr>
+                 <td colspan="2"></td>
+                 <td colspan="2"></td>
+               </tr>
+               <tr>
+                 <th>Tanggal</th>
+                 <th colspan="2"> Lokasi</th>
+                 <th>Auditor</th>
+               </tr>
+               <tr>
+                 <td></td>
+                 <td colspan="2"></td>
+                 <td></td>
+               </tr>
+             </thead>
+             <tbody>
+           </tbody>
+         </table>
            <div id="card-1">
             <div class="card">
               <div class="card-header">

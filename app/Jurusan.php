@@ -11,7 +11,7 @@ class Jurusan extends Model
 
     public function prodi()
     {
-        return $this->hasMany('\App\Prodi');
+        return $this->hasMany(Prodi::class);
     }
     public function user()
     {

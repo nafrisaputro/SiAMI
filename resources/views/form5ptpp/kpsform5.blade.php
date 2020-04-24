@@ -48,13 +48,14 @@
                     <th>RENCANA PENCEGAHAN</th>
                     <th>JADWAL PENCEGAHAN</th>
                     <th>PENANGGUNG JAWAB PENEGAHAN (GPM)</th> -->
+                    <!-- <th>prodi</th> -->
                     <th>AKSI</th>
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($table_form5 as $form5)
                   <tr>
-                   <!--  <td>{{$form5->deskripsi_kondisi}}</td>
+                    <!--  <td>{{$form5->deskripsi_kondisi}}</td>
                     <td>{{$form5->hasil_temuan}}</td>
                     <td>{{$form5->kriteria}}</td> -->
                     <td>{{$form5->akar_masalah}}</td>
@@ -62,34 +63,40 @@
                     <td>{{$form5->rekomendasi}}</td>
                     <td>{{$form5->tanggapan_audit}}</td>
                     <td>{{$form5->rencana_perbaikan}}</td>
-                  <!--   <td>{{$form5->jadwal_perbaikan}}</td>
+                    <!-- <td>{{$form5->id_prodi}}</td> -->
+                    <!--   <td>{{date('d F Y', strtotime($form5->jadwal_perbaikan))}}</td>
                     <td>{{$form5->pj_perbaikan}}</td>
                     <td>{{$form5->rencana_pencegahan}}</td>
-                    <td>{{$form5->jadwal_pencegahan}}</td>
+                    <td>{{date('d F Y', strtotime($form5->jadwal_pencegahan))}}</td>
                     <td>{{$form5->pj_pencegahan}}</td> -->
                     <td>
                       <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#detailModalLabel">
-                       <i class="fa fa-eye"></i> Detail
-                     </button>
-                     <button type="button" class="btn btn-info btn-sm"  data-toggle="modal" data-target="#edit">
-                       <i class="fa fa-pencil"></i> Edit
-                     </button>
-                     <!-- data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" -->
-                     <!--   <a href="/form5/{{$form5->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"><i class="fa fa-trash"></i> Hapus</a> -->
-                   </td>
-                 </tr>
-                 @endforeach
-               </tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                        <i class="fa fa-eye"></i> Detail
+                      </button>
+                      @if($form5->tanggapan_audit == NULL)
+                      <button type="button" class="btn btn-info btn-sm" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+                        <i class="fa fa-pencil"></i> Tambah
+                      </button>
+                      @else
+                      <button type="button" class="btn btn-info btn-sm" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+                        <i class="fa fa-pencil"></i> Edit
+                      </button>
+                      @endif
+                      <!--   <a href="/form5/{{$form5->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"><i class="fa fa-trash"></i> Hapus</a> -->
+                    </td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="width: 600px">
       <div class="modal-header">
@@ -99,7 +106,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/form5/edit1" method="POST" enctype="multipart/form-data">
+        <form action="/form5/{{$form5->id}}/edit1" method="POST" enctype="multipart/form-data">
           {{csrf_field()}}
           <div class="form-group">
             <label for="auditi">Tanggapan Auditi</label>
@@ -109,10 +116,10 @@
             <label for="perbaikan">Rencana Perbaikan</label>
             <input name="perbaikan" type="text" class="form-control" id="perbaikan" aria-describedby="emailHelp" placeholder="Masukan Rencana Perbaikan">
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
       </div>
     </div>

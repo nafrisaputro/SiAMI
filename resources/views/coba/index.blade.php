@@ -29,7 +29,7 @@
                                     <tr>
                                         <th>NAMA LENGKAP</th>
                                         <th>NIP</th>
-                                        <th>USERNAME</th>
+                                        <!-- <th>PASSWORD</th> -->
                                         <th>LEVEL</th>
                                         <th>AKSI</th>
                                     </tr>
@@ -39,7 +39,7 @@
                                     <tr>
                                         <td>{{$coba->nama}}</td>
                                         <td>{{$coba->nip}}</td>
-                                        <td>{{$coba->username}}</td>
+                                        <!-- <td>{{$coba->password}}</td> -->
                                         <td>{{$coba->level}}</td>
                                         <td>
                                             <a href="/coba/{{$coba->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
@@ -75,10 +75,6 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">NIP</label>
                         <input name="nip" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nip">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">USERNAME</label>
-                        <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Username">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>

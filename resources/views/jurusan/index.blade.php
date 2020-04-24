@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>{{$jurusan->nama_jurusan}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editModalLabel">
+                                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-myjurusan="{{$jurusan->nama_jurusan}}" data-target="#editModalLabel">
                                                 Edit
                                             </button>
                                             <a href="/jurusan/{{$jurusan->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
@@ -87,14 +87,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="/jurusan/{{$jurusan->id}}/update" method="POST">
+                <form action="/jurusan/{{$jurusan->id}}/update" method="POST">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Jurusan</label>
-                        <input name="nama_jurusan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Jurusan" value="{{$jurusan->nama_jurusan}}">
+                        <label for="exampleInputEmail1">Nama Jurusan</label>
+                        <input name="nama_jurusan" type="text" class="form-control" id="nama_jurusan" aria-describedby="emailHelp" placeholder="Masukan Jurusan Baru">
                     </div>
-                    <button type="submit" class="btn btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-warning">Update</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-info">Update</button>
                 </form>
             </div>
         </div>
