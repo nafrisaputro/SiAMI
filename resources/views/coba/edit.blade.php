@@ -46,7 +46,7 @@
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nama Lengkap</label>
-                                <input name="nama_lengkap" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nama Lengkap" value="{{$coba->nama}}">
+                                <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nama Lengkap" value="{{$coba->nama}}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">NIP</label>
@@ -55,6 +55,10 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">USERNAME</label>
                                 <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Username" value="{{$coba->username}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Password</label>
+                                <input name="password" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Password" value="{{$coba->password}}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Level</label>

@@ -63,7 +63,8 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function
 route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], function () {
     route::get('/dashboard', 'DashboardController@index');
 
-    route::get('/form2', 'Form2Controller@index');
+    route::get('/form2', 'Form2Controller@form2');
+    route::get('/form2/histori', 'Form2Controller@index');
     route::post('/form2/create', 'Form2Controller@create');
     route::post('/form2/{id_form2}/update', 'Form2Controller@update');
     route::get('/form2/{id_form2}/delete', 'Form2Controller@delete');

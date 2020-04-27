@@ -62,6 +62,7 @@
             <li><a href="/ptpp/prodi">PTPP</a></li>
           </ul>
         </li>
+        <li><a href="/form2/histori"> <i class="icon-home"></i>Data Form 2</a></li>
         @endif
 
       </ul>
