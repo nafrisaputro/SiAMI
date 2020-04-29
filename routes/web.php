@@ -65,6 +65,12 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], fu
 
     route::post('/form2/createA', 'Form2Controller@createA');
     route::post('/form2/createB', 'Form2Controller@createB');
+    route::post('/form2/createC', 'Form2Controller@createC');
+    route::post('/form2/createD', 'Form2Controller@createD');
+    route::post('/form2/createE', 'Form2Controller@createE');
+    route::post('/form2/createF', 'Form2Controller@createF');
+    route::post('/form2/createG', 'Form2Controller@createG');
+    route::post('/form2/createH', 'Form2Controller@createH');
 
 
     route::get('/form2', 'Form2Controller@form2');
