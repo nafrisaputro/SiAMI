@@ -331,13 +331,15 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php $no = 0; ?>
                   @foreach($table_form2 as $form2)
+                  <?php $no++; ?>
                   <tr>
-                    <td>{{$form2->no}}</td>
+                    <td>{{$no}}</td>
                     <td>{{$form2->elemen}}</td>
                     <td>{{$form2->sub_elemen}}</td>
-                    <td>{{$form2->nama_dokumen}}</td>
-                    <td>{!! $form2->keterangan !!}</td>
+                    <td><a href="/form2/{{$form2->nama_dokumen}}/download"">{{$form2->nama_dokumen}}</a></td>
+                    <td>{{$form2->keterangan}}</td>
                   </tr>
                   @endforeach
                 </tbody>

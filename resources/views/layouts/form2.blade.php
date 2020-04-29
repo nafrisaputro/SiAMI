@@ -43,7 +43,6 @@
 
     </div>
 
-
     <!-- JavaScript files-->
     <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
@@ -54,6 +53,9 @@
     <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
     <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -91,6 +93,20 @@
             // Show the current tab, and add an "active" class to the button that opened the tab
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
+        }
+    </script>
+    <script>
+        submitForms = function() {
+            // $('#button1').click(function() {
+            //     $('#button2').trigger('click');
+            // })
+
+            // $(document).ready(function() {
+            //     $("#form1").submit();
+            //     $("#form2").submit();
+            // });
+            document.getElementById("form1").submit();
+            document.getElementById("form2").submit();
         }
     </script>
     <!-- <script type="text/javascript">

@@ -1,7 +1,11 @@
 @extends('layouts.form2h')
 
 @section('form2h')
-
+@if(session('sukses'))
+<div class="alert alert-success" role="alert">
+    {{session('sukses')}}
+</div>
+@endif
 <section>
     <div class="container-fluid">
         <header>
@@ -79,6 +83,7 @@
                                                             <table class="table table-striped table-hover">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>No</th>
                                                                         <th>Sub Elemen</th>
                                                                         <th>Nama Dokumen</th>
                                                                         <th>Keterangan</th>
@@ -86,12 +91,15 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <?php $no = 0; ?>
                                                                     @foreach($formB as $form2B)
+                                                                    <?php $no++; ?>
                                                                     <tr>
+                                                                        <td>{{$no}}</td>
                                                                         <td>{{$form2B->sub_elemen}}</td>
                                                                         <td>{{$form2B->nama_dokumen}}</td>
                                                                         <td>{{$form2B->keterangan}}</td>
-                                                                        <td><button></button></td>
+                                                                        <td><a href="/form2/{{$form2B->id_form2}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a></td>
                                                                         @endforeach
                                                                     </tr>
                                                                 </tbody>

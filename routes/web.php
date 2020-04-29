@@ -63,9 +63,12 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function
 route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], function () {
     route::get('/dashboard', 'DashboardController@index');
 
+    route::post('/form2/createA', 'Form2Controller@createA');
+    route::post('/form2/createB', 'Form2Controller@createB');
+
+
     route::get('/form2', 'Form2Controller@form2');
     route::get('/form2/histori', 'Form2Controller@index');
-    route::post('/form2/create', 'Form2Controller@create');
     route::post('/form2/{id_form2}/update', 'Form2Controller@update');
     route::get('/form2/{id_form2}/delete', 'Form2Controller@delete');
 
@@ -87,6 +90,7 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Kantor Penjaminan Mutu']],
     route::post('/ptpp/{id}/btn', 'PtppController@btn');
 
 
+
     route::get('/form1form2', 'Form1form2Controller@index');
 
     route::get('/form1form2/dataform1', 'Form1form2Controller@dataform1');
@@ -99,4 +103,6 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Kantor Penjaminan Mutu']],
     route::get('/form1form2/dataform2', 'Form1form2Controller@dataform2');
     route::post('/form1form2/create2', 'Form1form2Controller@create2');
     route::get('/form1form2/{id_form2}/delete2', 'Form1form2Controller@delete2');
+
+    route::get('/form2/{id}/download', 'Form1form2Controller@download');
 });
