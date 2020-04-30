@@ -17,9 +17,7 @@
 </div>
 <section>
   <div class="container-fluid">
-    <header>
-      <h1 class="h1 display">Perbaikan</h1>
-    </header>
+    <br>
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
@@ -74,15 +72,16 @@
                         <i class="fa fa-eye"></i> Detail
                       </button>
                       @if($form5->tanggapan_audit == NULL)
-                      <button type="button" class="btn btn-info btn-sm" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
                         <i class="fa fa-pencil"></i> Tambah
                       </button>
                       @else
-                      <button type="button" class="btn btn-info btn-sm" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
                         <i class="fa fa-pencil"></i> Edit
                       </button>
                       @endif
                       <!--   <a href="/form5/{{$form5->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"><i class="fa fa-trash"></i> Hapus</a> -->
+
                     </td>
                   </tr>
                   @endforeach
@@ -106,8 +105,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/form5/{{$form5->id}}/edit1" method="POST" enctype="multipart/form-data">
+        <form action="/form5/edit1" method="POST">
           {{csrf_field()}}
+          <!-- ---------------------------------problemm-------------------- -->
+          @foreach($table_form5 as $form5)
+          <div class="form-group">
+            <input name="id" type="hidden" class="form-control" id="id" value="{{$form5->id}}">
+          </div>
+          @endforeach
+          <!-- ---------------------------------------------->
           <div class="form-group">
             <label for="auditi">Tanggapan Auditi</label>
             <input name="auditi" type="text" class="form-control" id="auditi" aria-describedby="emailHelp" placeholder="Masukan Tanggapan Auditi">

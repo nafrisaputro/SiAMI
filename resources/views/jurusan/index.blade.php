@@ -32,14 +32,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($table_jurusan as $jurusan)
+                                    @foreach($table_jurusan as $table_jurusan)
                                     <tr>
-                                        <td>{{$jurusan->nama_jurusan}}</td>
+                                        <td>{{$table_jurusan->nama_jurusan}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-myjurusan="{{$jurusan->nama_jurusan}}" data-target="#editModalLabel">
+                                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-myid="{{$table_jurusan->id}}" data-myjurusan="{{$table_jurusan->nama_jurusan}}" data-target="#editModalLabel">
                                                 Edit
                                             </button>
-                                            <a href="/jurusan/{{$jurusan->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
+                                            <a href="/jurusan/{{$table_jurusan->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -62,7 +62,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/jurusan/create" method="POST">
+                <form action="/jurusan/create" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Jurusan</label>
@@ -87,8 +87,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/jurusan/{{$jurusan->id}}/update" method="POST">
+                <form action="/jurusan/update" method="POST">
                     {{csrf_field()}}
+                    <div class="form-group">
+                        <input name="id" type="hidden" class="form-control" id="id" value="{{$table_jurusan->id}}">
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Jurusan</label>
                         <input name="nama_jurusan" type="text" class="form-control" id="nama_jurusan" aria-describedby="emailHelp" placeholder="Masukan Jurusan Baru">

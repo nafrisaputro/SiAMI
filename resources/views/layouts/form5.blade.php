@@ -42,6 +42,7 @@
     @yield('form5ptpp')
     @yield('ptpp')
     @yield('jurusan')
+    @yield('prodi')
     @yield('kajur')
     @yield('kps')
     @include('layouts.footer')
@@ -77,6 +78,7 @@
 
       var button = $(event.relatedTarget)
 
+      var audit = button.data('myaudit')
       var prodi = button.data('myprodi')
       var no = button.data('myno')
       var des = button.data('mydes')
@@ -89,9 +91,11 @@
       var rekom = button.data('myrekom')
       var jadwal = button.data('myjadwal')
       var pj = button.data('mypj')
+      var id = button.data('myid')
 
       var modal = $(this)
 
+      modal.find('.modal-body #tgl_audit').val(audit);
       modal.find('.modal-body #prodi').val(prodi);
       modal.find('.modal-body #no').val(no);
       modal.find('.modal-body #deskripsi').val(des);
@@ -100,6 +104,7 @@
       modal.find('.modal-body #rekom').val(rekom);
       modal.find('.modal-body #jadwal').val(jadwal);
       modal.find('.modal-body #gkm').val(pj);
+      modal.find('.modal-body #id').val(id);
     })
 
     $('#edit1').on('show.bs.modal', function(event) {
@@ -108,11 +113,13 @@
 
       var tanggap = button.data('mytanggap')
       var rencana = button.data('myrencana')
+      var id = button.data('myid')
 
       var modal = $(this)
 
       modal.find('.modal-body #auditi').val(tanggap);
       modal.find('.modal-body #perbaikan').val(rencana);
+      modal.find('.modal-body #id').val(id);
     })
 
     $('#edit2').on('show.bs.modal', function(event) {
@@ -122,12 +129,14 @@
       var pencegahan = button.data('mypencegahan')
       var jadwal = button.data('myjadwal')
       var pj = button.data('mypj')
+      var id = button.data('myid')
 
       var modal = $(this)
 
       modal.find('.modal-body #pencegahan').val(pencegahan);
       modal.find('.modal-body #jadwal').val(jadwal);
       modal.find('.modal-body #pj').val(pj);
+      modal.find('.modal-body #id').val(id);
     })
   </script>
 </body>

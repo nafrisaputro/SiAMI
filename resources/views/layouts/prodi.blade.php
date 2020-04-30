@@ -61,11 +61,14 @@
             var button = $(event.relatedTarget)
             var prodi = button.data('myprodi')
             var jurusan = button.data('myjurusan')
+            var id = button.data('myid')
+
 
             var modal = $(this)
 
             modal.find('.modal-body #nama_prodi').val(prodi);
             modal.find('.modal-body #id_jurusan').val(jurusan);
+            modal.find('.modal-body #id').val(id);
         })
     </script>
 </body>

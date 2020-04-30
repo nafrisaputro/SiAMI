@@ -54,6 +54,47 @@
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
+    <!--         <script type="text/javascript">
+        $('#editexample').on('show.bs.modal', function(event) {
+
+            var button = $(event.relatedTarget)
+            var nama = button.data('mynama')
+            var nip = button.data('mynip')
+            var user = button.data('myuser')
+            var pass = button.data('mypass')
+            var level = button.data('mylevel')
+            var prodi = button.data('myprodi')
+            var jurusan = button.data('myjurusan')
+            // var foto = button.data('myfoto')
+
+            var modal = $(this)
+
+            modal.find('.modal-body #nama').val(nama);
+            modal.find('.modal-body #nip').val(nip);
+            modal.find('.modal-body #username').val(user);
+            modal.find('.modal-body #password').val(pass);
+            modal.find('.modal-body #level').val(level);
+            modal.find('.modal-body #prodi').val(prodi);
+            modal.find('.modal-body #jurusan').val(jurusan);
+            // modal.find('.modal-body #foto').val(foto);
+        })
+    </script> -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#level').on('change', function() {
+                if (this.value == 'Ketua Jurusan') {
+                    $("#formprodi").hide();
+                    $("#formjurusan").show();
+                } else if (this.value == 'Ketua Program Studi') {
+                    $("#formjurusan").show();
+                    $("#formprodi").show();
+                } else {
+                    $("#formprodi").hide();
+                    $("#formjurusan").hide();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

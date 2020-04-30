@@ -17,18 +17,16 @@
 </div>
 <section>
     <div class="container-fluid">
-        <header>
-            <h1 class="h1 display">Audit</h1>
-        </header>
+        <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="h1 display">Permintaan Tindakan Perbaikan & Pencegahan (PTPP)
+                        <h3>Permintaan Tindakan Perbaikan & Pencegahan (PTPP)
                             <button type="button" class="btn btn-warning float-right">
                                 <i class="fa fa-print"></i> Print
                             </button>
-                        </h1>
+                        </h3>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

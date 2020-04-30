@@ -55,6 +55,19 @@
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
     <script src="{{asset('Admin/js/front.js')}}"></script>
+    <script type="text/javascript">
+        $('#editModalLabel').on('show.bs.modal', function(event) {
+
+            var button = $(event.relatedTarget)
+            var jurusan = button.data('myjurusan')
+            var id = button.data('myid')
+
+            var modal = $(this)
+
+            modal.find('.modal-body #nama_jurusan').val(jurusan);
+            modal.find('.modal-body #id').val(id);
+        })
+    </script>
 </body>
 
 </html>

@@ -346,11 +346,96 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi6" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen6" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen6" value="Renja" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen6" type="file" class="form-control" accept="application/pdf" id="nama_dokumen6">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan6">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi7" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen7" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen7" value="RAB" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen7" type="file" class="form-control" accept="application/pdf" id="nama_dokumen7">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan7">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi8" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen8" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen8" value="Indikator Kinerja" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen8" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan8">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi9" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen9" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen9" value="Kode Etik" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen9" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan9">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi10" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen10" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen10" value="Analisis / Mitigasi Resiko" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen10" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan10">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Notulensi Rapat" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -367,7 +452,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pengumuman2" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -384,7 +469,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Dokumentasi Kegiatan" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -401,7 +486,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman akademik (pendidikan, pengembangan suasana akademik dan otonomi keilmuan)" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -418,7 +503,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman kemahasiswaan" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -435,7 +520,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman penelitian dan PkM" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -452,7 +537,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman Pengembangan SDM" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -469,7 +554,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman keuangan, sarana dan prasarana" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -486,7 +571,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman sistem informasi" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -503,7 +588,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman kerjasama eksternal" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -520,92 +605,7 @@
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
-                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Keterangan</label>
-                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-row">
-                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
-                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
-                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Keterangan</label>
-                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-row">
-                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
-                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
-                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Keterangan</label>
-                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-row">
-                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
-                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
-                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Keterangan</label>
-                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-row">
-                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
-                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
-                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
-                                    </div>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Keterangan</label>
-                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-row">
-                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
-                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
-                                    <div class="col">
-                                        <label for="exampleInputEmail1">Sub Elemen</label>
-                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="SK Pengangkatan Personil" readonly>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Dokumen bukti implementasi / pelaksanaan pedoman – pedoman pengelolaan" readonly>
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -624,6 +624,51 @@
 
                     {{--Sistem Manajemen Mutu--}}
                     <div id="D" class="tabcontent">
+                        <div class="box box-primary">
+                            <form action="/form2/createA" method="POST" enctype="multipart/form-data" id="form1">
+                                {{csrf_field()}}
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen" value="A.Analisis SWOT" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen" value="Analisis Kondisis Eksternal" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen" type="file" class="form-control" accept="application/pdf" id="nama_dokumen">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen1" value="A.Analisis SWOT" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen1" value="Profil Prodi" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen1" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan1">
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary float-right">Simpan</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    {{--Sistem Manajemen Mutu--}}
+                    <div id="E" class="tabcontent">
                         <div class="box box-primary">
                             <form action="/form2/createA" method="POST" enctype="multipart/form-data" id="form1">
                                 {{csrf_field()}}

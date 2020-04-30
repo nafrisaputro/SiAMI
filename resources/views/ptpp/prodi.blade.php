@@ -1,6 +1,6 @@
 @extends('layouts.form5')
 
-@section('jurusan')
+@section('prodi')
 
 @if(session('sukses'))
 <div class="alert alert-success" role="alert">
@@ -10,7 +10,7 @@
 <div class="breadcrumb-holder">
     <div class="container-fluid">
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Pencegahan</a></li>
+            <li class="breadcrumb-item"><a href="#">Perbaikan</a></li>
             <li class="breadcrumb-item active">PTPP</li>
         </ul>
     </div>

@@ -28,25 +28,25 @@ route::group(['middleware' => ['auth', 'CekRole:Admin']], function () {
 
     route::get('/coba', 'CobaController@index');
     Route::post('/coba/create', 'CobaController@create');
+    // Route::post('/coba/{id}/edit1', 'CobaController@edit1');
     route::get('/coba/{id}/edit', 'CobaController@edit');
     route::post('/coba/{id}/update', 'CobaController@update');
     route::get('/coba/{id}/delete', 'CobaController@delete');
 
     route::get('/jurusan', 'JurusanController@index');
     Route::post('/jurusan/create', 'JurusanController@create');
-    route::post('/jurusan/{id}/update', 'JurusanController@update');
+    route::post('/jurusan/update', 'JurusanController@update');
     route::get('/jurusan/{id}/delete', 'JurusanController@delete');
 
     route::get('/prodi', 'ProdiController@index');
     Route::post('/prodi/create', 'ProdiController@create');
-    route::post('/prodi/{id}/update', 'ProdiController@update');
+    route::post('/prodi/update', 'ProdiController@update');
     route::get('/prodi/{id}/delete', 'ProdiController@delete');
 
     route::get('/form5', 'Form5ptppController@index');
     Route::post('/form5/create', 'Form5ptppController@create');
-    route::post('/form5/{id}/update', 'Form5ptppController@update');
+    route::post('/form5/update', 'Form5ptppController@update');
     route::get('/form5/{id}/delete', 'Form5ptppController@delete');
-
     // route::get('test', 'TEsting@test');    
 });
 
@@ -54,7 +54,7 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Jurusan']], function
     route::get('/dashboard', 'DashboardController@index');
 
     route::get('/form5/kajur', 'Form5ptppController@kajur');
-    Route::post('/form5/{id}/edit2', 'Form5ptppController@edit2');
+    Route::post('/form5/edit2', 'Form5ptppController@edit2');
 
 
     route::get('/ptpp/jurusan', 'PtppController@jurusan');
@@ -79,7 +79,7 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], fu
     route::get('/form2/{id_form2}/delete', 'Form2Controller@delete');
 
     route::get('/form5/kps', 'Form5ptppController@kps');
-    Route::post('/form5/{id}/edit1', 'Form5ptppController@edit1');
+    Route::post('/form5/edit1', 'Form5ptppController@edit1');
 
     route::get('/ptpp/prodi', 'PtppController@prodi');
 });
@@ -87,15 +87,18 @@ route::group(['middleware' => ['auth', 'CekRole:Admin,Ketua Program Studi']], fu
 route::group(['middleware' => ['auth', 'CekRole:Admin,Kantor Penjaminan Mutu']], function () {
     route::get('/dashboard', 'DashboardController@index');
 
+    route::get('/jadwal', 'JadwalController@index');
+    Route::post('/jadwal/create', 'JadwalController@create');
+    route::post('/jadwal/edit', 'JadwalController@edit');
+    route::get('/jadwal/{id_jadwal}/delete', 'JadwalController@delete');
+
     route::get('/form5', 'Form5ptppController@index');
     Route::post('/form5/create', 'Form5ptppController@create');
-    route::post('/form5/{id}/edit', 'Form5ptppController@edit');
+    route::post('/form5/edit', 'Form5ptppController@edit');
     route::get('/form5/{id}/delete', 'Form5ptppController@delete');
 
     route::get('/ptpp', 'PtppController@index');
     route::post('/ptpp/{id}/btn', 'PtppController@btn');
-
-
 
     route::get('/form1form2', 'Form1form2Controller@index');
 

@@ -301,6 +301,36 @@ class Form2Controller extends Controller
         $formU10->sub_elemen = $request->sub_elemen9;
         $formU10->keterangan = $request->keterangan9;
         $formU10->save();
+
+        if ($request->hasFile('nama_dokumen10')) {
+            $request->file('nama_dokumen10')->move('data_form2/', $request->file('nama_dokumen10')->getClientOriginalName());
+            $formU11->nama_dokumen = $request->file('nama_dokumen10')->getClientOriginalName();
+        }
+        $formU11->id_prodi = $request->id_prodi10;
+        $formU11->elemen = $request->elemen10;
+        $formU11->sub_elemen = $request->sub_elemen10;
+        $formU11->keterangan = $request->keterangan10;
+        $formU11->save();
+
+        if ($request->hasFile('nama_dokumen11')) {
+            $request->file('nama_dokumen11')->move('data_form2/', $request->file('nama_dokumen11')->getClientOriginalName());
+            $formU12->nama_dokumen = $request->file('nama_dokumen11')->getClientOriginalName();
+        }
+        $formU12->id_prodi = $request->id_prodi11;
+        $formU12->elemen = $request->elemen11;
+        $formU12->sub_elemen = $request->sub_elemen11;
+        $formU12->keterangan = $request->keterangan11;
+        $formU12->save();
+
+        if ($request->hasFile('nama_dokumen12')) {
+            $request->file('nama_dokumen12')->move('data_form2/', $request->file('nama_dokumen12')->getClientOriginalName());
+            $formU13->nama_dokumen = $request->file('nama_dokumen12')->getClientOriginalName();
+        }
+        $formU13->id_prodi = $request->id_prodi12;
+        $formU13->elemen = $request->elemen12;
+        $formU13->sub_elemen = $request->sub_elemen12;
+        $formU13->keterangan = $request->keterangan12;
+        $formU13->save();
         return redirect('/form2')->with('sukses', 'Data Ditambahkan');
     }
     public function update(Request $request, $id)

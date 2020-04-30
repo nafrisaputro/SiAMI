@@ -17,9 +17,7 @@
 </div>
 <section>
   <div class="container-fluid">
-    <header>
-      <h1 class="h1 display">Pencegahan</h1>
-    </header>
+    <br>
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
@@ -74,11 +72,11 @@
                         <i class="fa fa-eye"></i> Detail
                       </button>
                       @if($form5->rencana_pencegahan == NULL)
-                      <button type="button" class="btn btn-info btn-sm" data-mypencegahan="{{$form5->rencana_pencegahan}}" data-myjadwal="{{$form5->jadwal_pencegahan}}" data-mypj="{{$form5->pj_pencegahan}}" data-toggle="modal" data-target="#edit2">
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mypencegahan="{{$form5->rencana_pencegahan}}" data-myjadwal="{{$form5->jadwal_pencegahan}}" data-mypj="{{$form5->pj_pencegahan}}" data-toggle="modal" data-target="#edit2">
                         <i class="fa fa-pencil"></i> Tambah
                       </button>
                       @else
-                      <button type="button" class="btn btn-info btn-sm" data-mypencegahan="{{$form5->rencana_pencegahan}}" data-myjadwal="{{$form5->jadwal_pencegahan}}" data-mypj="{{$form5->pj_pencegahan}}" data-toggle="modal" data-target="#edit2">
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mypencegahan="{{$form5->rencana_pencegahan}}" data-myjadwal="{{$form5->jadwal_pencegahan}}" data-mypj="{{$form5->pj_pencegahan}}" data-toggle="modal" data-target="#edit2">
                         <i class="fa fa-pencil"></i> Edit
                       </button>
                       @endif
@@ -98,7 +96,7 @@
 
 <div class="modal fade" id="edit2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="width: 600px">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Data Pencegahan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -106,11 +104,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/form5/{{$form5->id}}/edit2" method="POST" enctype="multipart/form-data">
+        <form action="/form5/edit2" method="POST" enctype="multipart/form-data">
           {{csrf_field()}}
           <div class="form-group">
+            <input name="id" type="hidden" class="form-control" id="id" value="{{$form5->id}}">
+          </div>
+          <div class="form-group">
             <label for="pencegahan">Rencana Pencegahan</label>
-            <input name="pencegahan" type="text" class="form-control" id="pencegahan" aria-describedby="emailHelp" placeholder="Masukan Rencana Pencegahan">
+            <!-- <input name="pencegahan" type="text" class="form-control" id="pencegahan" aria-describedby="emailHelp" placeholder="Masukan Rencana Pencegahan"> -->
+            <textarea class="form-control" name="pencegahan" id="pencegahan" rows="3" placeholder="Masukan Rencana Pencegahan"></textarea>
           </div>
           <div class="form-group">
             <label for="jadwal">Jadwal Pencegahan</label>
@@ -123,7 +125,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-info">Simpan</button>
         </form>
       </div>
     </div>

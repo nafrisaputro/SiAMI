@@ -56,7 +56,7 @@
               {{csrf_field()}}
               <div class="form-group-material">
                 <input id="username" type="text" name="username" required data-msg="Masukan USERNAME" class="input-material">
-                <label for="username" class="label-material">USERNAME</label>
+                <label for="username" class="label-material">Username</label>
               </div>
               <div class="form-group-material">
                 <input id="password" type="password" name="password" required data-msg="Masukkan Password" class="input-material">

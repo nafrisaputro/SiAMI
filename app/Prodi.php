@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prodi extends Model
 {
   protected $table = 'table_prodi';
+  protected $primaryKey = 'id';
   protected $fillable = ['nama_prodi', 'id_jurusan'];
 
   public function jurusan()
@@ -24,5 +25,9 @@ class Prodi extends Model
   public function form2()
   {
     return $this->hasMany(Form2::class);
+  }
+  public function jadwal()
+  {
+    return $this->hasMany(Jadwal::class);
   }
 }

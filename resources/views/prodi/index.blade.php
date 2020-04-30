@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>{{$prodi->nama_prodi}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-sm" data-myprodi="{{$prodi->nama_prodi}}" data-myjurusan="{{$prodi->id_jurusan}}" data-toggle="modal" data-target="#editModalLabel">
+                                            <button type="button" class="btn btn-info btn-sm" data-myprodi="{{$prodi->nama_prodi}}" data-myjurusan="{{$prodi->id_jurusan}}" data-myid="{{$prodi->id}}" data-toggle="modal" data-target="#editModalLabel">
                                                 Edit
                                             </button>
                                             <a href="/prodi/{{$prodi->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
@@ -93,8 +93,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="/prodi/{{$prodi->id}}/update" method="POST">
+                <form class="form-horizontal" action="/prodi/update" method="POST">
                     {{csrf_field()}}
+                    <div class="form-group">
+                        <input name="id" type="hidden" class="form-control" id="id" value="{{$prodi->id}}">
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Prodi</label>
                         <input name="nama_prodi" type="text" class="form-control" id="nama_prodi" aria-describedby="emailHelp" placeholder="Masukan Prodi">

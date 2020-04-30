@@ -4,7 +4,16 @@
     <div class="sidenav-header d-flex align-items-center justify-content-center">
       <!-- User Info-->
       <div class="sidenav-header-inner text-center"><img src="{{asset('images/'.auth()->user()->foto)}}" alt="person" class="img-fluid rounded-circle">
+        <!-- <h2 class="h5">{{auth()->user()->nama}}</h2><span>{{auth()->user()->level}}</span> -->
+        @if(auth()->user()->level == 'Ketua Program Studi')
+        <h2 class="h5">{{auth()->user()->nama}}</h2><span>{{auth()->user()->level}}</span><br>
+        <span>{{auth()->user()->prodi->nama_prodi}}</span>
+        @elseif(auth()->user()->level == 'Ketua Jurusan')
+        <h2 class="h5">{{auth()->user()->nama}}</h2><span>{{auth()->user()->level}}</span><br>
+        <span>{{auth()->user()->jurusan->nama_jurusan}}</span>
+        @else
         <h2 class="h5">{{auth()->user()->nama}}</h2><span>{{auth()->user()->level}}</span>
+        @endif
       </div>
       <!-- Small Brand information, appears on minimized sidebar-->
       <div class="sidenav-header-logo"><a href="/dashboard" class="brand-small text-center"> <strong>A</strong><strong class="text-primary">M</strong><strong class="text-primary">I</strong></a></div>
@@ -31,6 +40,7 @@
         <li><a href="/dashboard"> <i class="icon-home"></i>Home</a></li>
         <li><a href="#auditdropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-table"></i>Audit</a>
           <ul id="auditdropdown" class="collapse list-unstyled ">
+            <li><a href="/jadwal">Jadwal Audit</a></li>
             <li><a href="/form1form2">FORM 1 dan FORM 2</a></li>
             <li><a href="/form5">FORM 5</a></li>
             <li><a href="/ptpp">PTPP</a></li>

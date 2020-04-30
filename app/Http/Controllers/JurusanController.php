@@ -16,11 +16,12 @@ class JurusanController extends Controller
         \App\Jurusan::create($request->all());
         return redirect('/jurusan')->with('sukses', 'Data sukses ditambahkan');
     }
-    public function update(Request $request, $id)
+    public function update(request $request)
     {
-        $jurusan = \App\Jurusan::find($id);
+        // dd($request->all());
+        $jurusan = \App\Jurusan::find($request->id);
         $jurusan->update($request->all());
-        return redirect('/jurusan')->with('sukses', 'Data sukses diupdate');
+        return back()->with('sukses', 'Data berhasil diubah');
     }
     public function delete($id)
     {

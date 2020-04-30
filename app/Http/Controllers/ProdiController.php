@@ -22,13 +22,11 @@ class ProdiController extends Controller
         $prodi->save();
         return back()->with('sukses', 'Data berhasil ditambahkan');
     }
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         // dd($request->all());
-        $prodi = \App\Prodi::find($id);
-        $prodi->nama_prodi = $request->nama_prodi;
-        $prodi->id_jurusan = $request->id_jurusan;
-        $prodi->save();
+        $prodi = \App\Prodi::find($request->id);
+        $prodi->update($request->all());
         return back()->with('sukses', 'Data berhasil diubah');
     }
     public function delete($id)
