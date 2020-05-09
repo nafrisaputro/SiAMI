@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="{{asset('Admin/css/style.default.css')}}" id="theme-stylesheet">
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
   <!-- Favicon-->
   <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
   <!-- Tweaks for older IEs-->
@@ -87,6 +90,12 @@
   <script src="{{asset('Admin/js/charts-home.js')}}"></script>
   <!-- Main File-->
   <script src="{{asset('Admin/js/front.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script>
+    @if(Session::has('gagal'))
+    toastr.error("{{Session::get('gagal')}}", "Eror")
+    @endif
+  </script>
 </body>
 
 </html>

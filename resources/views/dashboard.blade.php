@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{asset('Admin/css/style.default.css')}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
+
+
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
     <!-- Tweaks for older IEs-->
@@ -38,7 +40,7 @@
 
     <div class="page">
         @include('layouts.navbar')
-        
+
 
         @include('layouts.footer')
 
@@ -56,7 +58,7 @@
     <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
-    <script src="{{asset('Admin/js/front.js')}}"></script>
+
 </body>
 
 </html>
