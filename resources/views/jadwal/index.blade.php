@@ -11,7 +11,11 @@
   <div class="container-fluid">
     <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Audit</a></li>
+<<<<<<< HEAD
       <li class="breadcrumb-item active">Jadwal Audit Form 5</li>
+=======
+      <li class="breadcrumb-item active">Jadwal Audit</li>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     </ul>
   </div>
 </div>
@@ -22,7 +26,11 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
+<<<<<<< HEAD
           <h3>Jadwal Audit Form 5
+=======
+          <h3>Jadwal Audit
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#tambah">
               <i class="fa fa-plus"></i> Tambah
             </button>
@@ -58,7 +66,11 @@
                   <td>{{$jdwl->auditor_anggota}}</td>
                   <td>{{$jdwl->lead_auditor}}</td>
                   <td>
+<<<<<<< HEAD
                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editjadwalkjm" data-myid="{{$jdwl->id}}" data-mytgl="{{$jdwl->tgl_audit}}" data-mylokasi="{{$jdwl->lokasi}}" data-myruang="{{$jdwl->ruang_lingkup}}" data-mytahap="{{$jdwl->tahap_audit}}" data-myauditi="{{$jdwl->auditi}}" data-mywakil="{{$jdwl->wakil_auditi}}" data-myauditor="{{$jdwl->auditor_ketua}}" data-myanggota="{{$jdwl->auditor_anggota}}" data-mylead="{{$jdwl->lead_auditor}}">
+=======
+                   <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit" data-myid="{{$jdwl->id}}" data-mytgl="{{$jdwl->tgl_audit}}" data-mylokasi="{{$jdwl->lokasi}}" data-myruang="{{$jdwl->ruang_lingkup}}" data-mytahap="{{$jdwl->tahap_audit}}" data-myauditi="{{$jdwl->auditi}}" data-mywakil="{{$jdwl->wakil_auditi}}" data-myauditor="{{$jdwl->auditor_ketua}}" data-myanggota="{{$jdwl->auditor_anggota}}" data-mylead="{{$jdwl->lead_auditor}}">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                     <i class="fa fa-pencil"></i> Edit
                   </button>
                   <a href="/jadwal/{{$jdwl->id_jadwal}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"><i class="fa fa-trash"></i> Hapus</a>
@@ -79,7 +91,11 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
+<<<<<<< HEAD
         <h5 class="modal-title" id="exampleModalLabel">Tambah Jadwal Audit Form 5</h5>
+=======
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Jadwal Audit</h5>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -98,7 +114,11 @@
                 <select name="prodi" class="form-control" id="prodi">
                   <option value="">Pilih Prodi</option>
                   @foreach($prodi as $pr)
+<<<<<<< HEAD
                   <option value="{{$pr->id_prodi}}">{{$pr->nama_prodi}}</option>
+=======
+                  <option value="{{$pr->id}}">{{$pr->nama_prodi}}</option>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                   @endforeach
                 </select>
               </div>
@@ -133,6 +153,10 @@
             </div>
             <div class="form-group">
               <label for="anggota">Auditor Anggota</label>
+<<<<<<< HEAD
+=======
+              <!-- <input type="text" class="form-control" id="anggota" name="anggota" placeholder="Masukkan Nama Auditor Anggota"> -->
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
               <textarea class="form-control" name="anggota" id="anggota" rows="2" placeholder="Masukkan Nama Auditor Anggota"></textarea>
             </div>
             <div class="form-group">
@@ -151,11 +175,19 @@
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="modal fade" id="editjadwalkjm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Jadwal Audit Form 5</h5>
+=======
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Jadwal Audit</h5>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -164,9 +196,13 @@
         <form action="/jadwal/edit" method="POST" enctype="multipart/form-data">
           {{csrf_field()}}
           <div class="form-group">
+<<<<<<< HEAD
              @foreach($jadwal as $jdwl)
             <input name="id" type="hidden" class="form-control" id="id" value="{{$jdwl->id_jadwal}}">
             @endforeach
+=======
+            <input name="id" type="hidden" class="form-control" id="id" value="{{$jdwl->id_jadwal}}">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
           </div>
           <div class="row"> 
             <div class="col-lg-6">
@@ -179,7 +215,11 @@
                 <select name="prodi" class="form-control" id="prodi">
                   <option value="">Pilih Prodi</option>
                   @foreach($prodi as $pr)
+<<<<<<< HEAD
                   <option value="{{$pr->id_prodi}}">{{$pr->nama_prodi}}</option>
+=======
+                  <option value="{{$pr->id}}">{{$pr->nama_prodi}}</option>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                   @endforeach
                 </select>
               </div>

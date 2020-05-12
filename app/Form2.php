@@ -14,6 +14,10 @@ class Form2 extends Model
 
 	public function prodi()
 	{
+<<<<<<< HEAD
 		return $this->belongsTo(Prodi::class, 'id_prodi');
+=======
+		return $this->belongsTo(Prodi::class);
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 	}
 }

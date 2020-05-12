@@ -66,6 +66,7 @@
     </script>
     <script src="{{asset('Admin/js/front.js')}}"></script>
     <script type="text/javascript">
+<<<<<<< HEAD
     $('#editjurusan').on('show.bs.modal', function (event) {
 
       var button = $(event.relatedTarget) 
@@ -78,6 +79,20 @@
       modal.find('.modal-body #id').val(id);
   })
 </script>
+=======
+        $('#editModalLabel').on('show.bs.modal', function(event) {
+
+            var button = $(event.relatedTarget)
+            var jurusan = button.data('myjurusan')
+            var id = button.data('myid')
+
+            var modal = $(this)
+
+            modal.find('.modal-body #nama_jurusan').val(jurusan);
+            modal.find('.modal-body #id').val(id);
+        })
+    </script>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 </body>
 
 </html>

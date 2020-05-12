@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="{{asset('Admin/css/style.default.css')}}" id="theme-stylesheet">
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
   <!-- Favicon-->
   <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
   <!-- Tweaks for older IEs-->
@@ -55,7 +58,11 @@
             <form class="text-left form-validate" action="/postlogin" method="POST">
               {{csrf_field()}}
               <div class="form-group-material">
+<<<<<<< HEAD
                 <input id="username" type="text" name="username" required data-msg="Masukan Username" class="input-material">
+=======
+                <input id="username" type="text" name="username" required data-msg="Masukan USERNAME" class="input-material">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                 <label for="username" class="label-material">Username</label>
               </div>
               <div class="form-group-material">
@@ -87,6 +94,12 @@
   <script src="{{asset('Admin/js/charts-home.js')}}"></script>
   <!-- Main File-->
   <script src="{{asset('Admin/js/front.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script>
+    @if(Session::has('gagal'))
+    toastr.error("{{Session::get('gagal')}}", "Eror")
+    @endif
+  </script>
 </body>
 
 </html>

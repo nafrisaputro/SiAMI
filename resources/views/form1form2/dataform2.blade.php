@@ -17,11 +17,18 @@
 </div>
 <section>
   <div class="container-fluid">
+<<<<<<< HEAD
   <br>
+=======
+    <header>
+      <h1 class="h1 display">Data Form 2</h1>
+    </header>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
           <div class="card-header">
+<<<<<<< HEAD
             <h3>Form 2 Daftar kelengkapan Dokumen
               <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
                 <i class="fa fa-plus"></i> Tambah 
@@ -30,6 +37,16 @@
           </div>
           <div class="card-body">
        <!--      <table class="table table-bordered">
+=======
+            <h4>Form 2 Daftar kelengkapan Dokumen
+              <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-plus"></i> Tambah
+              </button>
+            </h4>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
               <thead style="text-align: center">
                 <tr>
                   <th colspan="6">Auditi</th>
@@ -78,7 +95,11 @@
                   <th></th>
                 </tr>
               </thead>
+<<<<<<< HEAD
             </table> -->
+=======
+            </table>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
             <div class="table-responsive">
               <table id="data2" class="table table-bordered">
                 <thead style="text-align: center">
@@ -101,6 +122,7 @@
                     <td>{{$form2->keterangan}}</td>
                     <td>
                       <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModalLabel"><i class="fa fa-pencil"></i>
+<<<<<<< HEAD
                       Edit
                     </button>
                     <a href="/form1form2/{{$form2->id_form2}}/delete2" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"> <i class="fa fa-trash"></i> Hapus</a>
@@ -109,12 +131,26 @@
                 @endforeach
               </tbody>
             </table>
+=======
+                        Edit
+                      </button>
+                      <a href="/form1form2/{{$form2->id_form2}}/delete2" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"> <i class="fa fa-trash"></i> Hapus</a>
+                    </td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
           </div>
         </div>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 </section>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -131,6 +167,7 @@
           <div class="form-group">
             <label for="exampleFormControlSelect1">Elemen</label>
             <select name="elemen" class="form-control" id="exampleFormControlSelect1">
+<<<<<<< HEAD
              <option value="">Pilih Elemen</option>
                     <!--      @foreach($table_form2 as $form2 )
                         <option value="{{$form2->elemen}}">{{$form2->elemen}}</option>
@@ -170,6 +207,47 @@
               </div>
             </div>
           </div>
+=======
+              <option value="">Pilih Elemen</option>
+              <!--      @foreach($table_form2 as $form2 )
+                        <option value="{{$form2->elemen}}">{{$form2->elemen}}</option>
+                        @endforeach -->
+              <option value="A.Analisis SWOT">A. Analisis SWOT</option>
+              <option value="B.Visi, Misi, Tujuan dan Sasaran">B. Visi, Misi, Tujuan dan Sasaran</option>
+              <option value="C.Tata Pamong">C. Tata Pamong</option>
+              <option value="D.Sistem Manajemen Mutu">D. Sistem Manajemen Mutu</option>
+              <option value="E.Kerja Sama">E. Kerja Sama</option>
+              <option value="F.Manajemen Sumberdaya">F. Manajemen Sumberdaya</option>
+              <option value="G.Pelaksanaan Proses">G. Pelaksanaan Proses</option>
+              <option value="H.Pengukuran, Analisis dan Perbaikan">H. Pengukuran, Analisis dan Perbaikan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">No</label>
+            <input name="no" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nomor Sub Elemen">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Sub Elemen</label>
+            <input name="sub" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Sub Elemen">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Dokumen</label>
+            <input name="dokumen" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Dokumen">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Keterangan</label>
+            <input name="keterangan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Keterangan">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 
 
           @endsection

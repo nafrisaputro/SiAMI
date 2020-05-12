@@ -19,8 +19,8 @@ class JurusanController extends Controller
     public function update(request $request)
     {
         // dd($request->all());
-       $jurusan = \App\Jurusan::find($request->id);
-       $jurusan->update($request->all());
+        $jurusan = \App\Jurusan::find($request->id);
+        $jurusan->update($request->all());
         return back()->with('sukses', 'Data berhasil diubah');
     }
     public function delete($id)

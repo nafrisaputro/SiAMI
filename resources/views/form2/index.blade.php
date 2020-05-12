@@ -88,6 +88,7 @@
                         </table>
                         @endforeach
 
+<<<<<<< HEAD
                         <div class="tab">
                             <button class="tablinks" onclick="openCity(event, 'A')">A.Analisis SWOT</button>
                             <button class="tablinks" onclick="openCity(event, 'B')">Visi, Misi, Tujuan dan Sasaran</button>
@@ -100,6 +101,8 @@
                         </div>
                     </div>
                     <!-- Tab content -->
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                     {{-- Analisis SWOT --}}
                     <div id="A" class="tabcontent">
                         <div class="box box-primary">
@@ -107,7 +110,11 @@
                                 {{csrf_field()}}
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen" value="A.Analisis SWOT" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -124,7 +131,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen1" value="A.Analisis SWOT" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -144,7 +155,10 @@
                             </form>
                         </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                     {{--VIsi, Misi, Tujuan dan Sasaran--}}
                     <div id="B" class="tabcontent">
                         <div class="box box-primary">
@@ -152,7 +166,11 @@
                                 {{csrf_field()}}
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -169,7 +187,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen1" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -186,7 +208,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi2" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi2" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen2" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -203,7 +229,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -220,7 +250,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi4" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi4" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen4" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -237,7 +271,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi5" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi5" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen5" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -254,7 +292,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi6" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi6" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen6" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -271,7 +313,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi7" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi7" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen7" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -288,7 +334,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi8" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi8" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen8" value="VIsi, Misi, Tujuan dan Sasaran" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -308,7 +358,10 @@
                             </form>
                         </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                     {{--TATA PAMONG--}}
                     <div id="C" class="tabcontent">
                         <div class="box box-primary">
@@ -316,7 +369,11 @@
                                 {{csrf_field()}}
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -333,7 +390,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen1" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -350,7 +411,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi2" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi2" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen2" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -367,7 +432,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -384,7 +453,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi4" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi4" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen4" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -401,7 +474,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi5" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi5" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen5" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -418,7 +495,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi6" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi6" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen6" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -435,7 +516,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi7" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi7" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen7" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -452,7 +537,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi8" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi8" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen8" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -469,7 +558,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi9" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi9" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen9" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -486,7 +579,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi10" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi10" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen10" value="Tata Pamong" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -503,6 +600,7 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi11" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -516,10 +614,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan11">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Notulensi Rapat" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi12" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen12" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -533,10 +647,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan12">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pengumuman2" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi13" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen13" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -550,10 +680,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan13">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Dokumentasi Kegiatan" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi14" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen14" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -567,10 +713,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan14">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman akademik (pendidikan, pengembangan suasana akademik dan otonomi keilmuan)" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi15" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen15" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -584,10 +746,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan15">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman kemahasiswaan" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi16" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen16" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -601,10 +779,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan16">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman penelitian dan PkM" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi17" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen17" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -618,10 +812,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan17">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman Pengembangan SDM" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi18" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen18" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -635,10 +845,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan18">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman keuangan, sarana dan prasarana" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi19" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen19" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -652,10 +878,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan19">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman sistem informasi" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi20" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen20" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -669,10 +911,26 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan20">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Pedoman kerjasama eksternal" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi21" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen21" value="Tata Pamong" hidden>
                                     <div class="col">
@@ -686,6 +944,21 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Keterangan</label>
                                         <input type="text" id="keterangan" class="form-control" name="keterangan21">
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi3" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen3" value="Tata Pamong" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen3" value="Dokumen bukti implementasi / pelaksanaan pedoman – pedoman pengelolaan" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Dokumen Pendukung</label>
+                                        <input name="nama_dokumen3" type="file" class="form-control" accept="application/pdf" id="nama_dokumen1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Keterangan</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan3">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                 </div>
                                 <br>
@@ -697,6 +970,7 @@
                     {{--Sistem Manajemen Mutu--}}
                     <div id="D" class="tabcontent">
                         <div class="box box-primary">
+<<<<<<< HEAD
                             <form action="/form2/createC" method="POST" enctype="multipart/form-data" id="form1">
                                 {{csrf_field()}}
                                 <br>
@@ -706,6 +980,17 @@
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
                                         <input type="text" id="sub_elemen" class="form-control" name="sub_elemen" value="SK Pembentukan Struktur Organisasi SPMI, GPM dan GKM" readonly>
+=======
+                            <form action="/form2/createA" method="POST" enctype="multipart/form-data" id="form1">
+                                {{csrf_field()}}
+                                <br>
+                                <div class="form-row">
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen" value="A.Analisis SWOT" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen" value="Analisis Kondisis Eksternal" readonly>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -718,11 +1003,19 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen1" value="Sistem Manajemen Mutu" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
                                         <input type="text" id="sub_elemen" class="form-control" name="sub_elemen1" value="SK Tupoksi personalia Struktur Organisasi SPMI, GPM dan GKM" readonly>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+                                    <input type="text" id="elemen" class="form-control" name="elemen1" value="A.Analisis SWOT" hidden>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1">Sub Elemen</label>
+                                        <input type="text" id="sub_elemen" class="form-control" name="sub_elemen1" value="Profil Prodi" readonly>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     </div>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Dokumen Pendukung</label>
@@ -734,6 +1027,7 @@
                                     </div>
                                 </div>
                                 <br>
+<<<<<<< HEAD
                                 <div class="form-row">
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi2" value="{{auth()->user()->prodi->id_prodi}}" hidden>
                                     <input type="text" id="elemen" class="form-control" name="elemen2" value="Sistem Manajemen Mutu" hidden>
@@ -1049,6 +1343,8 @@
                                     </div>
                                 </div>
                                 <br>
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                 <button type="submit" class="btn btn-primary float-right">Simpan</button>
                             </form>
                         </div>
@@ -1061,7 +1357,11 @@
                                 {{csrf_field()}}
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen" value="A.Analisis SWOT" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -1078,7 +1378,11 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
+<<<<<<< HEAD
                                     <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id_prodi}}" hidden>
+=======
+                                    <input type="text" id="id_prodi" class="form-control" name="id_prodi1" value="{{auth()->user()->prodi->id}}" hidden>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                                     <input type="text" id="elemen" class="form-control" name="elemen1" value="A.Analisis SWOT" hidden>
                                     <div class="col">
                                         <label for="exampleInputEmail1">Sub Elemen</label>
@@ -1103,6 +1407,7 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -1149,4 +1454,7 @@
         </div>
     </div>
 </div>
+=======
+
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 @endsection

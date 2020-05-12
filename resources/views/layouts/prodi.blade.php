@@ -46,6 +46,7 @@
         </div>
 
 
+<<<<<<< HEAD
         <!-- JavaScript files-->
         <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
@@ -64,6 +65,35 @@
         $(document).ready(function() {
             $('#prodi').DataTable();
         });
+=======
+    <!-- JavaScript files-->
+    <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
+    <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
+    <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
+    <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
+    <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+    <!-- Main File-->
+    <script src="{{asset('Admin/js/front.js')}}"></script>
+    <script type="text/javascript">
+        $('#editModalLabel').on('show.bs.modal', function(event) {
+
+            var button = $(event.relatedTarget)
+            var prodi = button.data('myprodi')
+            var jurusan = button.data('myjurusan')
+            var id = button.data('myid')
+
+
+            var modal = $(this)
+
+            modal.find('.modal-body #nama_prodi').val(prodi);
+            modal.find('.modal-body #id_jurusan').val(jurusan);
+            modal.find('.modal-body #id').val(id);
+        })
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     </script>
     
     <script type="text/javascript">

@@ -23,6 +23,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h1 class="h1 display">Jurusan
+<<<<<<< HEAD
                             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-plus"></i> Tambah Jurusan
                         </button>
                     </h1>
@@ -49,6 +50,38 @@
                             @endforeach
                         </tbody>
                     </table>
+=======
+                            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
+                                Tambah Jurusan
+                            </button>
+                        </h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>NAMA JURUSAN</th>
+                                        <th>TOMBOL AKSI</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($table_jurusan as $table_jurusan)
+                                    <tr>
+                                        <td>{{$table_jurusan->nama_jurusan}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-myid="{{$table_jurusan->id}}" data-myjurusan="{{$table_jurusan->nama_jurusan}}" data-target="#editModalLabel">
+                                                Edit
+                                            </button>
+                                            <a href="/jurusan/{{$table_jurusan->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')">Hapus</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                 </div>
             </div>
         </div>
@@ -91,6 +124,7 @@
                 </button>
             </div>
             <div class="modal-body">
+<<<<<<< HEAD
                 <form action="/jurusan/update" method="POST" >
                     {{csrf_field()}}
                     <div class="form-group">
@@ -106,6 +140,21 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-info">Simpan</button>
+=======
+                <form action="/jurusan/update" method="POST">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <input name="id" type="hidden" class="form-control" id="id" value="{{$table_jurusan->id}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Jurusan</label>
+                        <input name="nama_jurusan" type="text" class="form-control" id="nama_jurusan" aria-describedby="emailHelp" placeholder="Masukan Jurusan Baru">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-info">Update</button>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                 </form>
             </div>
         </div>

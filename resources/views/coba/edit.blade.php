@@ -28,7 +28,11 @@
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nama Lengkap</label>
+<<<<<<< HEAD
                                 <input name="name" type="text" class="form-control" id="nama" aria-describedby="emailHelp" placeholder="Masukan Nama Lengkap" value="{{$coba->name}}">
+=======
+                                <input name="nama" type="text" class="form-control" id="nama" aria-describedby="emailHelp" placeholder="Masukan Nama Lengkap" value="{{$coba->nama}}">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">NIP</label>
@@ -38,6 +42,7 @@
                                 <label for="exampleInputEmail1">Username</label>
                                 <input name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Masukan Username" value="{{$coba->username}}">
                             </div>
+<<<<<<< HEAD
                             <!-- <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>
                                 <input name="password" type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Masukan Password Baru" value="{{$coba->password}}">
@@ -83,6 +88,53 @@
                                     @endforeach
                                 </select>
                             </div>
+=======
+                            <!--   <div class="form-group">
+                                <label for="exampleInputEmail1">Password</label>
+                                <input name="password" type="text" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Masukan Password Baru">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Level</label>
+                                <select name="level" class="form-control" id="level">
+                                    <option value="Admin" @if($coba->level == "Admin") selected @endif>Admin</option>
+                                    <option value="Kantor Penjaminan Mutu" @if($coba->level == "Kantor Penjaminan Mutu") selected @endif>Kantor Penjaminan Mutu</option>
+                                    <option value="Ketua Jurusan" @if($coba->level == "Ketua Jurusan") selected @endif>Ketua Jurusan</option>
+                                    <option value="Ketua Program Studi" @if($coba->level == "Ketua Program Studi") selected @endif>Ketua Program Studi</option>
+                                </select>
+                            </div>
+                            @if($coba->level == 'Ketua Program Studi' )
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Prodi</label>
+                                <select name="prodi" class="form-control" id="prodi">
+                                    @foreach ($table_prodi as $prodi )
+                                    <option value="{{ $prodi->id }}" {{$prodi->id == $coba->id_prodi ? 'selected' : ''}}>
+                                        {{ $prodi->nama_prodi }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Jurusan</label>
+                                <select name="jurusan" class="form-control" id="jurusan">
+                                    @foreach ($table_jurusan as $jurusan )
+                                    <option value="{{ $jurusan->id }}" {{$jurusan->id == $coba->id_jurusan ? 'selected' : ''}}>
+                                        {{ $jurusan->nama_jurusan }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @elseif ($coba->level == 'Ketua Jurusan' )
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Jurusan</label>
+                                <select name="jurusan" class="form-control" id="jurusan">
+                                    @foreach ($table_jurusan as $jurusan )
+                                    <option value="{{ $jurusan->id }}" {{$jurusan->id == $coba->id_jurusan ? 'selected' : ''}}>
+                                        {{ $jurusan->nama_jurusan }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                             @endif
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Foto</label>

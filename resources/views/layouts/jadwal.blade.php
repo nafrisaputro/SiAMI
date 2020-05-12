@@ -4,7 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
   <title>Jadwal Audit Form 5</title>
+=======
+  <title>Jadwal Audit</title>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -40,8 +44,11 @@
         <div class="page">
           @include('layouts.navbar')
           @yield('jadwal')
+<<<<<<< HEAD
           @yield('jadwalkps')
           @yield('jadwalkajur')
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
           @include('layouts.footer')
 
         </div>
@@ -65,20 +72,30 @@
         <script>
         $(document).ready(function() {
           $('#jadwal').DataTable();
+<<<<<<< HEAD
           $('#jadwalkps').DataTable();
           $('#jadwalkajur').DataTable();
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
         });
       </script>
 
       <script type="text/javascript">
+<<<<<<< HEAD
       $('#editjadwalkjm').on('show.bs.modal', function(event) {
+=======
+      $('#edit').on('show.bs.modal', function(event) {
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 
         var button = $(event.relatedTarget)
 
         var tgl = button.data('mytgl')
         var lokasi = button.data('mylokasi')
         var ruang = button.data('myruang')
+<<<<<<< HEAD
         // $('#checkbox').is(':checked');
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
         // var data = explode("\r\n " , var ruang);
         // $("input[name='ruang[]']:checked")
         // $('input[type="checkbox"]').on('change', function (e) {
@@ -105,11 +122,19 @@
         modal.find('.modal-body #anggota').val(anggota);
         modal.find('.modal-body #lead').val(lead);
       })
+<<<<<<< HEAD
    // $('.modal').find('input[type="checkbox"]').each(function() {
    //       var ruang = $.inArray(this.value, ruang['myruang'])!=-1;
 
    //       $(this).prop('checked', state);
    //     });
+=======
+   $('.modal').find('input[type="checkbox"]').each(function() {
+         var ruang = $.inArray(this.value, ruang['myruang'])!=-1;
+
+         $(this).prop('checked', state);
+       });
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     </script>
   </body>
 

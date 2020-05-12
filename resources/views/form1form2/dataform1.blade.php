@@ -51,6 +51,7 @@
                 <td>
                   <a href="/form1form2/{{$form1->id_form1}}/edit" class="btn btn-info btn-sm"> <i class="fa fa-pencil"></i> Edit</a>
               <!--    <button type="button" class="btn btn-info btn-sm" data-myno="{{$form1->no}}" data-mypertanyaan="{{$form1->pertanyaan}}" data-mysub="{{$form1->sub_ruang_lingkup}}" data-mylingkup="{{$form1->ruang_lingkup}}" data-toggle="modal" data-target="#editform1"><i class="fa fa-pencil"></i> Edit 
+<<<<<<< HEAD
               </button> -->
               <a href="/form1form2/{{$form1->id_form1}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"> <i class="fa fa-trash"></i> Hapus</a>
             </td>
@@ -58,6 +59,16 @@
           @endforeach
         </tbody>
       </table>
+=======
+                </button> -->
+                <a href="/form1form2/{{$form1->id_form1}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Konfirmasi hapus ?')"> <i class="fa fa-trash"></i> Hapus</a>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     </div>
   </div>
 </div>

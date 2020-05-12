@@ -30,6 +30,7 @@
   <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<<<<<<< HEAD
         <link rel="stylesheet" href="{{asset('Admin/vendor/new/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 
       </head>
@@ -160,6 +161,117 @@
         .draw();
     });
 </script>
+=======
+  <link rel="stylesheet" href="{{asset('Admin/vendor/new/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+
+</head>
+@include('layouts.sidebar')
+
+<body>
+
+  <div class="page">
+    @include('layouts.navbar')
+    @yield('form5ptpp')
+    @yield('ptpp')
+    @yield('jurusan')
+    @yield('prodi')
+    @yield('kajur')
+    @yield('kps')
+    @include('layouts.footer')
+
+  </div>
+
+
+  <!-- JavaScript files-->
+  <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
+  <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
+  <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
+  <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
+  <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+  <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+  <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+  <!-- Main File-->
+  <script src="{{asset('Admin/js/front.js')}}"></script>
+  <!-- tambahan script -->
+  <script src="{{asset('Admin/vendor/new/datatables/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('Admin/vendor/new/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+  <script>
+    $(document).ready(function() {
+      $('#ptpp').DataTable();
+      $('#table5').DataTable();
+      $('#jurusan').DataTable();
+    });
+  </script>
+
+  <script type="text/javascript">
+    $('#edit').on('show.bs.modal', function(event) {
+
+      var button = $(event.relatedTarget)
+
+      var audit = button.data('myaudit')
+      var prodi = button.data('myprodi')
+      var no = button.data('myno')
+      var des = button.data('mydes')
+      var hasil = button.data('myhasil')
+      $('input[name="radio"][value="' + hasil + '"]').prop('checked', true);
+      var kriteria = button.data('mykriteria')
+      $('input[name="radio2"][value="' + kriteria + '"]').prop('checked', true)
+      var masalah = button.data('mymasalah')
+      var akibat = button.data('myakibat')
+      var rekom = button.data('myrekom')
+      var jadwal = button.data('myjadwal')
+      var pj = button.data('mypj')
+      var id = button.data('myid')
+
+      var modal = $(this)
+
+      modal.find('.modal-body #tgl_audit').val(audit);
+      modal.find('.modal-body #prodi').val(prodi);
+      modal.find('.modal-body #no').val(no);
+      modal.find('.modal-body #deskripsi').val(des);
+      modal.find('.modal-body #masalah').val(masalah);
+      modal.find('.modal-body #akibat').val(akibat);
+      modal.find('.modal-body #rekom').val(rekom);
+      modal.find('.modal-body #jadwal').val(jadwal);
+      modal.find('.modal-body #gkm').val(pj);
+      modal.find('.modal-body #id').val(id);
+    })
+
+    $('#edit1').on('show.bs.modal', function(event) {
+
+      var button = $(event.relatedTarget)
+
+      var tanggap = button.data('mytanggap')
+      var rencana = button.data('myrencana')
+      var id = button.data('myid')
+
+      var modal = $(this)
+
+      modal.find('.modal-body #auditi').val(tanggap);
+      modal.find('.modal-body #perbaikan').val(rencana);
+      modal.find('.modal-body #id').val(id);
+    })
+
+    $('#edit2').on('show.bs.modal', function(event) {
+
+      var button = $(event.relatedTarget)
+
+      var pencegahan = button.data('mypencegahan')
+      var jadwal = button.data('myjadwal')
+      var pj = button.data('mypj')
+      var id = button.data('myid')
+
+      var modal = $(this)
+
+      modal.find('.modal-body #pencegahan').val(pencegahan);
+      modal.find('.modal-body #jadwal').val(jadwal);
+      modal.find('.modal-body #pj').val(pj);
+      modal.find('.modal-body #id').val(id);
+    })
+  </script>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
 </body>
 
 </html>

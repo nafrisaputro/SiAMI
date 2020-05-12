@@ -72,11 +72,19 @@
                         <i class="fa fa-eye"></i> Detail
                       </button>
                       @if($form5->tanggapan_audit == NULL)
+<<<<<<< HEAD
                       <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#editform5kps">
                         <i class="fa fa-pencil"></i> Tambah
                       </button>
                       @else
                       <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#editform5kps">
+=======
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+                        <i class="fa fa-pencil"></i> Tambah
+                      </button>
+                      @else
+                      <button type="button" class="btn btn-info btn-sm" data-myid="{{$form5->id}}" data-mytanggap="{{$form5->tanggapan_audit}}" data-myrencana="{{$form5->rencana_perbaikan}}" data-toggle="modal" data-target="#edit1">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                         <i class="fa fa-pencil"></i> Edit
                       </button>
                       @endif
@@ -95,7 +103,11 @@
   </div>
 </section>
 
+<<<<<<< HEAD
 <div class="modal fade" id="editform5kps" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+=======
+<div class="modal fade" id="edit1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="width: 600px">
       <div class="modal-header">
@@ -122,10 +134,10 @@
             <label for="perbaikan">Rencana Perbaikan</label>
             <input name="perbaikan" type="text" class="form-control" id="perbaikan" aria-describedby="emailHelp" placeholder="Masukan Rencana Perbaikan">
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
       </div>
     </div>

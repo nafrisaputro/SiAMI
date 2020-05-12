@@ -8,6 +8,13 @@ use DB;
 
 class Form2Controller extends Controller
 {
+    public function form2()
+    {
+        $prodi = \App\Prodi::all();
+        $form2 = \App\Form2::all();
+        return view('form2.index', ['form2' => $form2, 'prodi' => $prodi]);
+    }
+
     public function index()
     {
         // ------------------------------------------------------
@@ -20,13 +27,13 @@ class Form2Controller extends Controller
         $formA = \App\Form2::select('id_form2', 'elemen', 'sub_elemen', 'keterangan', 'nama_dokumen')
             ->where('elemen', '=', 'A.Analisis SWOT')
             ->get();
-        $formB = \App\Form2::select('sub_elemen', 'keterangan', 'nama_dokumen')
+        $formB = \App\Form2::select('id_form2', 'sub_elemen', 'keterangan', 'nama_dokumen')
             ->where('elemen', '=', 'VIsi, Misi, Tujuan dan Sasaran')
             ->get();
-        $formC = \App\Form2::select('sub_elemen', 'keterangan', 'nama_dokumen')
+        $formC = \App\Form2::select('id_form2', 'sub_elemen', 'keterangan', 'nama_dokumen')
             ->where('elemen', '=', 'Tata Pamong')
             ->get();
-        $formD = \App\Form2::select('sub_elemen', 'keterangan', 'nama_dokumen')
+        $formD = \App\Form2::select('id_form2', 'sub_elemen', 'keterangan', 'nama_dokumen')
             ->where('elemen', '=', 'Sistem Manajemen Mutu')
             ->get();
         $formE = \App\Form2::select('sub_elemen', 'keterangan', 'nama_dokumen')

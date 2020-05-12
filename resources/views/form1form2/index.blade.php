@@ -19,7 +19,13 @@
 <section class="forms">
   <div class="container-fluid">
     <!-- Page Header-->
+<<<<<<< HEAD
     <br>
+=======
+    <header>
+      <h1 class="h3 display">Form 1 dan Form 2</h1>
+    </header>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     <div class="row">
       <div class="col-lg-5">
         <div class="card">
@@ -314,7 +320,11 @@
       <div class="col-lg-7">
         <div class="card">
           <div class="card-header d-flex align-items-center">
+<<<<<<< HEAD
             <h3>Form 2 Daftar Kelengkapan Dokumen</h3>
+=======
+            <h4>Form 2 Daftar Kelengkapan Dokumen</h4>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
           </div>
           <div class="card-body text-center">
             <div class="table-responsive">
@@ -337,7 +347,11 @@
                     <td>{{$form2->elemen}}</td>
                     <td>{{$form2->sub_elemen}}</td>
                     <td><a href="/form2/{{$form2->nama_dokumen}}/download"">{{$form2->nama_dokumen}}</a></td>
+<<<<<<< HEAD
                     <td>{!! $form2->keterangan !!}</td>
+=======
+                    <td>{{$form2->keterangan}}</td>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
                   </tr>
                   @endforeach
                 </tbody>

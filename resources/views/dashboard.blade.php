@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{asset('Admin/css/style.default.css')}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
+
+
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
     <!-- Tweaks for older IEs-->
@@ -38,10 +40,15 @@
 
     <div class="page">
         @include('layouts.navbar')
+<<<<<<< HEAD
         @yield('homeadmin')
         @yield('homekajur')
         @yield('homekps')
         @yield('homekjm')
+=======
+
+
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
         @include('layouts.footer')
     </div>
 
@@ -57,7 +64,7 @@
     <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
     <!-- Main File-->
-    <script src="{{asset('Admin/js/front.js')}}"></script>
+
 </body>
 
 </html>

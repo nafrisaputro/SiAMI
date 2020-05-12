@@ -16,7 +16,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+<<<<<<< HEAD
         'nip', 'nama',  'email', 'password', 'level', 'foto', 
+=======
+        'nip', 'nama',  'email', 'password', 'level', 'foto',
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     ];
 
     /**
@@ -51,9 +55,12 @@ class User extends Authenticatable
     public function prodi()
     {
         return $this->belongsTo(Prodi::class, 'id_prodi');
+<<<<<<< HEAD
     }
     public function userslvl()
     {
         return $this->belongsTo(Users_lvl::class, 'level');
+=======
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     }
 }

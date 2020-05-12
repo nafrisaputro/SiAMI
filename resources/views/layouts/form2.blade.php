@@ -43,7 +43,6 @@
 
     </div>
 
-
     <!-- JavaScript files-->
     <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
@@ -55,6 +54,12 @@
     <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('Admin/js/charts-home.js')}}"></script>
 
+<<<<<<< HEAD
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -93,6 +98,23 @@
             evt.currentTarget.className += " active";
         }
     </script>
+<<<<<<< HEAD
+=======
+    <script>
+        submitForms = function() {
+            // $('#button1').click(function() {
+            //     $('#button2').trigger('click');
+            // })
+
+            // $(document).ready(function() {
+            //     $("#form1").submit();
+            //     $("#form2").submit();
+            // });
+            document.getElementById("form1").submit();
+            document.getElementById("form2").submit();
+        }
+    </script>
+>>>>>>> 05e7864c6482a010bdac9efc2435ca179a17e911
     <!-- <script type="text/javascript">
         $.ajaxSetup({
             headers: {
