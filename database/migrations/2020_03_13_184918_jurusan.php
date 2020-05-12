@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TableJurusan extends Migration
+class Jurusan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class TableJurusan extends Migration
      */
     public function up()
     {
-        Schema::create('table_jurusan', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('jurusan', function (Blueprint $table) {
+            $table->increments('id_jurusan');
             $table->string('nama_jurusan');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class TableJurusan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_jurusan');
+        Schema::dropIfExists('jurusan');
     }
 }

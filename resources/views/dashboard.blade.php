@@ -38,10 +38,11 @@
 
     <div class="page">
         @include('layouts.navbar')
-        
-
+        @yield('homeadmin')
+        @yield('homekajur')
+        @yield('homekps')
+        @yield('homekjm')
         @include('layouts.footer')
-
     </div>
 
 

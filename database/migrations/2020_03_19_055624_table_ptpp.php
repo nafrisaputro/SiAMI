@@ -25,13 +25,13 @@ class TablePtpp extends Migration
             $table->string('rencana_perbaikan');
             $table->string('tanggapan_audit');
             $table->string('rekomendasi');
-            $table->string('jadwal_perbaikan');
+            $table->date('jadwal_perbaikan');
             $table->string('pj_perbaikan');
             $table->string('rencana_pencegahan');
-            $table->string('jadwal_pencegahan');
+            $table->date('jadwal_pencegahan');
             $table->string('pj_pencegahan');
             $table->string('status');
-            $table->string('tgl_audit');
+            $table->integer('tanggal_audit');
             $table->timestamps();
         });
     }

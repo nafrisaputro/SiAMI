@@ -17,7 +17,7 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('username', 'password'))) {
             return redirect('/dashboard');
         }
-        return redirect('/');
+        return redirect('/')->with('gagal', 'Username atau Password salah');
     }
     public function logout()
     {

@@ -6,12 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jurusan extends Model
 {
-    protected $table = 'table_jurusan';
+    protected $table = 'jurusan';
+     protected $primaryKey = 'id_jurusan';
     protected $fillable = ['nama_jurusan'];
 
     public function prodi()
     {
-        return $this->hasMany('\App\Prodi');
+        return $this->hasMany(Prodi::class);
     }
     public function user()
     {

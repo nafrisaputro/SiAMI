@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TableProdi extends Migration
+class TableJadwalAudit extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class TableProdi extends Migration
      */
     public function up()
     {
-        Schema::create('table_prodi', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nama_prodi');
+            Schema::create('table_jadwal_audit', function (Blueprint $table) {
+            $table->increments('id_jadwal_audit');
+            $table->string('keterangan');
+            $table->string('dokumen');
             $table->timestamps();
         });
     }
@@ -27,6 +28,7 @@ class TableProdi extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_prodi');
+        Schema::dropIfExists('table_jadwal_audit');
+        //
     }
 }

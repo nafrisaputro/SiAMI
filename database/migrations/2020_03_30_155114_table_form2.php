@@ -14,14 +14,15 @@ class TableForm2 extends Migration
     public function up()
     {
         Schema::create('table_form2', function (Blueprint $table) {
-             $table->increments('id_form2');
-              $table->string('no');
-            $table->string('elemen');
-            $table->string('sub_elemen');
-            $table->string('nama_dokumen');
-            $table->string('keterangan');
-            $table->timestamps();
-        });
+           $table->increments('id_form2');
+           $table->integer('id_prodi');
+           $table->string('no');
+           $table->string('elemen');
+           $table->string('sub_elemen');
+           $table->string('nama_dokumen');
+           $table->string('keterangan');
+           $table->timestamps();
+       });
     }
 
     /**

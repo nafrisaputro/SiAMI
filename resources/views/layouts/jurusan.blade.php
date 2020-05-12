@@ -26,35 +26,58 @@
     <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{asset('Admin/vendor/new/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+    
     <!-- Tweaks for older IEs-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-@include('layouts.sidebar')
+    </head>
+    @include('layouts.sidebar')
 
-<body>
+    <body>
 
-    <div class="page">
-        @include('layouts.navbar')
-        @yield('jurusan')
-        @include('layouts.footer')
+        <div class="page">
+            @include('layouts.navbar')
+            @yield('jurusan')
+            @include('layouts.footer')
 
-    </div>
+        </div>
 
 
-    <!-- JavaScript files-->
-    <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
-    <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
-    <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <script src="{{asset('Admin/js/charts-home.js')}}"></script>
-    <!-- Main File-->
+        <!-- JavaScript files-->
+        <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
+        <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
+        <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+        <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+        <script src="{{asset('Admin/vendor/new/datatables/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('Admin/vendor/new/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+        <!-- Main File-->
+        <script>
+        $(document).ready(function() {
+            $('#jurusan').DataTable();
+        });
+    </script>
     <script src="{{asset('Admin/js/front.js')}}"></script>
+    <script type="text/javascript">
+    $('#editjurusan').on('show.bs.modal', function (event) {
+
+      var button = $(event.relatedTarget) 
+      var jurusan = button.data('myjurusan') 
+      var id = button.data('myid') 
+
+      var modal = $(this)
+
+      modal.find('.modal-body #nama_jurusan').val(jurusan);
+      modal.find('.modal-body #id').val(id);
+  })
+</script>
 </body>
 
 </html>

@@ -9,10 +9,11 @@ class Form2 extends Model
 	protected $table = 'table_form2';
 	protected $primaryKey = 'id_form2';
 	protected $fillable = [
-		'no','elemen','sub_elemen','nama_dokumen','keterangan'];
+		'id_prodi', 'elemen', 'sub_elemen', 'nama_dokumen', 'keterangan'
+	];
 
-		public function prodi()
-		{
-			return $this->belongsTo(Prodi::class);
-		}
+	public function prodi()
+	{
+		return $this->belongsTo(Prodi::class, 'id_prodi');
 	}
+}

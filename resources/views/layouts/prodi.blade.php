@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Data Jurusan</title>
+    <title>Data Prodi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -26,44 +26,63 @@
     <link rel="stylesheet" href="{{asset('Admin/css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('Admin/img/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{asset('Admin/vendor/new/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+
     <!-- Tweaks for older IEs-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-@include('layouts.sidebar')
+    </head>
+    @include('layouts.sidebar')
 
-<body>
+    <body>
 
-    <div class="page">
-        @include('layouts.navbar')
-        @yield('prodi')
-        @include('layouts.footer')
+        <div class="page">
+            @include('layouts.navbar')
+            @yield('prodi')
+            @include('layouts.footer')
 
-    </div>
+        </div>
 
 
-    <!-- JavaScript files-->
-    <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
-    <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
-    <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <script src="{{asset('Admin/js/charts-home.js')}}"></script>
-    <!-- Main File-->
-    <script src="{{asset('Admin/js/front.js')}}"></script>
-    <script>
-        $('#editModal').on('show.bs.modal', function(event) {
-            console.log('Modal Opened');
-            var button = $(event.relatedTarget)
-            var modal = $(this)
-
-            modal.find('.modal-body #fprodi').val(prodi);
-        })
+        <!-- JavaScript files-->
+        <script src="{{asset('Admin/vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/popper.js/umd/popper.min.js')}}"> </script>
+        <script src="{{asset('Admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('Admin/js/grasp_mobile_progress_circle-1.0.0.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
+        <script src="{{asset('Admin/vendor/chart.js/Chart.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('Admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+        <script src="{{asset('Admin/js/charts-home.js')}}"></script>
+        <!-- Main File-->
+        <script src="{{asset('Admin/js/front.js')}}"></script>
+        <script src="{{asset('Admin/vendor/new/datatables/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('Admin/vendor/new/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+        <script>
+        $(document).ready(function() {
+            $('#prodi').DataTable();
+        });
     </script>
+    
+    <script type="text/javascript">
+    $('#editprodi').on('show.bs.modal', function(event) {
+
+        var button = $(event.relatedTarget)
+        var prodi = button.data('myprodi')
+        var jurusan = button.data('myjurusan')
+        var id = button.data('myid') 
+
+
+        var modal = $(this)
+
+        modal.find('.modal-body #nama_prodi').val(prodi);
+        modal.find('.modal-body #id_jurusan').val(jurusan);
+        modal.find('.modal-body #id').val(id);
+    })
+</script>
 </body>
 
 </html>
+

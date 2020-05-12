@@ -15,7 +15,7 @@ class CekRole
      */
     public function handle($request, Closure $next, ...$level)
     {
-        if (in_array($request->user()->level,$level)) {
+        if (in_array($request->user()->userslvl->jabatan,$level)) {
             return $next($request);
         }
         return redirect('/master');
